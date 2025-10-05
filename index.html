@@ -3,22 +3,45 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Soham | Portfolio</title>
-  <meta name="robots" content="noindex,nofollow"/> <!-- link-only -->
+  <title>Soham | Project Portfolio</title>
+  <!-- keep this if you want it “link-only” (not indexed by Google) -->
+  <meta name="robots" content="noindex,nofollow"/>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
-<body style="margin:0;font-family:system-ui,Arial,sans-serif">
-  <section style="min-height:70vh;display:grid;place-items:center;text-align:center;color:#fff;
-    background:
-      linear-gradient(rgba(2,16,37,.65),rgba(2,16,37,.85)),
-      url('https://images.unsplash.com/photo-1548625149-9129dad2c7bb?q=80&w=2070&auto=format&fit=crop') center/cover">
-    <div>
-      <img src="https://i.imgur.com/4Z1ZQ5v.png" alt="Your headshot"
-           style="width:180px;height:180px;border-radius:50%;outline:4px solid rgba(255,255,255,.6);object-fit:cover">
-      <h1 style="margin:20px 0 8px;font-size:44px">Hi, I’m Soham</h1>
-      <p style="max-width:800px;margin:0 auto;line-height:1.6">
+<body id="top">
+  <!-- HERO -->
+  <header class="hero">
+    <!-- set your background image here -->
+    <div class="bg" style="
+      background-image:
+        linear-gradient(rgba(2,16,37,.65), rgba(2,16,37,.85)),
+        url('assets/hero-bg.jpg');
+    "></div>
+
+    <div class="wrap">
+      <!-- your photo -->
+      <img class="avatar" src="assets/avatar.jpg" alt="Soham headshot"/>
+
+      <h1>Hi, I'm Soham</h1>
+      <p class="tagline">
         Automation & Mechatronics engineer — PLC/SCADA, ROS2 robotics, and data-driven reliability.
+        I build reliable control systems, integrate vision/robotics, and ship clean, maintainable code.
       </p>
+
+      <nav class="cta">
+        <a href="experience.html" class="pill">Work Experience</a>
+        <a href="projects.html" class="pill">My Projects</a>
+        <a href="skills-education.html" class="pill">Skills & Education</a>
+        <a href="contact.html" class="pill">Contact Me</a>
+      </nav>
     </div>
-  </section>
+  </header>
+
+  <footer class="foot">
+    <p>© <span id="y"></span> Soham A. Bhat Dubere</p>
+    <a class="top" href="#top" aria-label="Back to top">↑</a>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
+
