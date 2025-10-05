@@ -1,0 +1,49 @@
+/* base */
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,Inter,Arial,sans-serif;color:#0f172a;background:#fff}
+
+/* hero */
+.hero{position:relative;min-height:70vh;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.hero .wrap{position:relative;max-width:900px;padding:3rem 1rem}
+.avatar{width:180px;height:180px;border-radius:999px;object-fit:cover;
+  box-shadow:0 12px 32px rgba(0,0,0,.35);outline:4px solid rgba(255,255,255,.6)}
+h1{margin:1.25rem 0 .5rem;font-size:clamp(2rem,4vw,4rem);font-weight:800}
+.tagline{margin:.5rem auto 1rem;max-width:800px;line-height:1.6;opacity:.95;font-size:clamp(1rem,1.6vw,1.2rem)}
+.cta{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;margin-top:1rem}
+.pill{padding:.8rem 1.25rem;border-radius:999px;background:rgba(255,255,255,.3);
+  border:1px solid rgba(255,255,255,.35);color:#fff;text-decoration:none}
+.pill:hover{background:rgba(255,255,255,.45)}
+
+/* page layout */
+.section{padding:3rem 1rem}
+.container{max-width:1100px;margin:0 auto}
+
+/* cards & grid (used in experience page) */
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:1.25rem;
+  box-shadow:0 8px 20px rgba(0,0,0,.04)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+
+.card h3{margin:.2rem 0 0}
+.muted{color:#5b6b82}
+.period{color:#5b6b82;font-size:.95rem}
+ul{padding-left:1.2rem;margin:.5rem 0}
+ul li{margin:.35rem 0}
+
+/* icon circle */
+.icon{
+  width:44px;height:44px;border-radius:999px;
+  display:inline-grid;place-items:center;
+  background:#0f172a;color:#fff;margin-right:.6rem;
+}
+
+/* footer */
+.foot{padding:1rem 1rem;border-top:1px solid #e5e7eb;color:#334155;display:flex;justify-content:space-between;align-items:center}
+.top{display:inline-flex;width:38px;height:38px;align-items:center;justify-content:center;border-radius:999px;background:#0f172a;color:#fff;text-decoration:none}
+
+/* buttons */
+.btn{display:inline-block;padding:.7rem 1rem;border-radius:12px;background:#0f172a;color:#fff;text-decoration:none}
+.btn.light{background:#f1f5f9;color:#0f172a;border:1px solid #e2e8f0}
+.btn:hover{opacity:.9}
+.center{text-align:center}
+.space-top{margin-top:1.25rem}
