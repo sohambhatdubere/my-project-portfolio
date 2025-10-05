@@ -109,3 +109,49 @@ h1{
 /* Optional: make links on dark bg look consistent when not using pills */
 a { color: #E4EBF5; }
 a:hover { opacity: .9; }
+
+/* ==== Work Experience cards ==== */
+.exp-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1rem;
+}
+
+.exp-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:16px;
+  padding:1.1rem 1.2rem 1.0rem;
+  box-shadow:0 10px 24px rgba(0,0,0,.28);
+}
+
+.exp-head{
+  display:flex;
+  align-items:center;
+  gap:.8rem;
+  margin-bottom:.4rem;
+}
+
+.icon-badge{
+  width:48px; height:48px; border-radius:999px;
+  display:grid; place-items:center;
+  background:#fff; color:#0E1220; font-size:24px;
+  box-shadow:0 8px 18px rgba(0,0,0,.25);
+}
+
+.exp-card h3{
+  margin:0; color:#fff; font-size:1.1rem; letter-spacing:.2px;
+}
+.exp-meta{ color:#C7D1DE; font-size:.95rem; }
+
+.exp-card p{
+  margin:.45rem 0 0;
+  color:#E4EBF5;
+  line-height:1.6;
+}
+
+/* Section + container helpers (if not already present) */
+.section{ padding:2.5rem 1rem; background:#000; }
+.container{ max-width:1100px; margin:0 auto; }
+.center{ text-align:center; }
+
