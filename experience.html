@@ -1,16 +1,93 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Soham | Work Experience</title>
   <meta name="robots" content="noindex,nofollow"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
-  <section style="max-width:1100px;margin:0 auto;padding:2rem 1rem;">
-    <h2 style="margin:.5rem 0 1rem;color:#fff">Work Experience</h2>
-    <p>Coming soon — your roles with metrics and impact.</p>
-    <p><a class="pill pill-light" href="index.html">← Back to Home</a></p>
+<body id="top">
+
+  <!-- Thin hero to match your home style -->
+  <header class="hero hero--thin">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Work Experience</h1>
+      <p class="tagline">Recent automation & robotics engagements—focused on robust controls, vision, and clean integration.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="exp-grid">
+        <!-- 1) IoT-based Welding Robot Cell -->
+        <article class="exp-card">
+          <div class="exp-head">
+            <span class="icon-badge">🤖</span>
+            <div>
+              <h3>IoT-based Welding Robot Cell (STM32MP157F Controller)</h3>
+              <div class="exp-meta">@ Irobotics</div>
+            </div>
+          </div>
+          <p>
+            Built a connected welding cell around an STM32MP157F edge controller.
+            Implemented I/O handling for welding process control, safety interlocks, and
+            on-device data logging with periodic push to the cloud for traceability and dashboards.
+            Designed the HMI and communication layer for dependable, low-latency operation.
+          </p>
+        </article>
+
+        <!-- 2) 6D Pose + ABB GoFa -->
+        <article class="exp-card">
+          <div class="exp-head">
+            <span class="icon-badge">📦</span>
+            <div>
+              <h3>6D Pose Estimation & Material Handling with ABB GoFa Cobot</h3>
+              <div class="exp-meta">@ Irobotics</div>
+            </div>
+          </div>
+          <p>
+            Integrated an RGB-D vision pipeline for part localization and orientation (6D pose)
+            to drive ABB GoFa pick-place tasks. Calibrated camera–robot frames, tuned grasp
+            strategy, and synchronized motion/IO so the cobot could reliably pick varied parts
+            from bins and place them with repeatable accuracy.
+          </p>
+        </article>
+
+        <!-- 3) Object Sorting Mechanism for Conveyor -->
+        <article class="exp-card">
+          <div class="exp-head">
+            <span class="icon-badge">🛠️</span>
+            <div>
+              <h3>Object Sorting Mechanism for Conveyor</h3>
+              <div class="exp-meta">@ Just Engineering & SAGE Automation</div>
+            </div>
+          </div>
+          <p>
+            Programmed PLC logic and HMI for a sensor-based sorting line with pneumatics.
+            Streamlined the rejection subroutine and alarms, improving responsiveness and
+            operator clarity. Delivered a clean SCADA layout with role-based navigation and
+            robust field integration.
+          </p>
+        </article>
+      </div>
+
+      <div class="center" style="margin-top:1.5rem;">
+        <a class="pill pill-light" href="project.html">→ View Project Information</a>
+      </div>
+      <div class="center" style="margin-top:.75rem;">
+        <a class="pill pill-light" href="index.html">← Back to Home</a>
+      </div>
+    </div>
   </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Soham A. Bhat Dubere</p>
+    <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
