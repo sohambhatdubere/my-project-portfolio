@@ -4,44 +4,43 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Soham | Project Portfolio</title>
-  <!-- keep this if you want it “link-only” (not indexed by Google) -->
+  <!-- Keep pages link-only (not indexed) -->
   <meta name="robots" content="noindex,nofollow"/>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body id="top">
   <!-- HERO -->
   <header class="hero">
-    <!-- set your background image here -->
-    <div class="bg" style="
-      background-image:
-        linear-gradient(rgba(2,16,37,.65), rgba(2,16,37,.85)),
-        url('assets/hero-bg.jpg');
-    "></div>
+    <!-- uses your uploaded background: assets/hero-bg.jpg -->
+    <div class="hero-bg"></div>
 
-    <div class="wrap">
+    <div class="hero-content">
       <!-- your photo -->
       <img class="avatar" src="assets/avatar.jpg" alt="Soham headshot"/>
 
       <h1>Hi, I'm Soham</h1>
+
       <p class="tagline">
-        Automation & Mechatronics engineer — PLC/SCADA, ROS2 robotics, and data-driven reliability.
-        I build reliable control systems, integrate vision/robotics, and ship clean, maintainable code.
+        I turn shop-floor problems into reliable, intelligent systems. With a background in
+        PLC/SCADA (Allen-Bradley RSLogix & FactoryTalk; Siemens TIA/WinCC), robotics & ROS2,
+        and data-driven reliability, I design controls that scale and stay up. Highlights include
+        a 20% faster PLC scan on a sorting line, 97%-accurate CNC failure prediction, and a 3-DOF
+        arm at GE Aerospace that cut non-conformance by 80%. Let’s build automation that just works.
       </p>
 
-      <nav class="cta">
-        <a href="experience.html" class="pill">Work Experience</a>
-        <a href="projects.html" class="pill">My Projects</a>
-        <a href="skills-education.html" class="pill">Skills & Education</a>
-        <a href="contact.html" class="pill">Contact Me</a>
+      <nav class="cta-row">
+        <a href="experience.html" class="pill pill-light">Work Experience</a>
+        <a href="projects.html" class="pill pill-light">Project Information</a>
+        <a href="contact.html" class="pill pill-light">Contact Details</a>
       </nav>
     </div>
   </header>
 
-  <footer class="foot">
-    <p>© <span id="y"></span> Soham A. Bhat Dubere</p>
-    <a class="top" href="#top" aria-label="Back to top">↑</a>
+  <footer class="footer">
+    <p>© <span id="year"></span> Soham A. Bhat Dubere</p>
+    <a class="to-top" href="#top" aria-label="Back to top">↑</a>
   </footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-
