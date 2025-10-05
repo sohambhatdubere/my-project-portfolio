@@ -4,11 +4,11 @@ html{scroll-behavior:smooth}
 body{
   margin:0;
   font-family:system-ui,Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-  color:#e8eef6;            /* body text is light, hero is dark background */
-  background:#0b1a2b;       /* fallback color while image loads */
+  color:#e8eef6;
+  background:#0b1a2b;   /* dark fallback */
 }
 
-/* HERO (mimics Rudram’s) */
+/* HERO */
 .hero{
   position:relative;
   min-height:78vh;
@@ -18,11 +18,12 @@ body{
   color:#fff;
   overflow:hidden;
 }
+/* Uses your uploaded image: assets/hero-bg.jpg */
 .hero-bg{
   position:absolute; inset:0;
   background-image:
     linear-gradient(rgba(2,16,37,.62), rgba(2,16,37,.86)),
-    url('assets/hero-bg.jpg');        /* ← your uploaded image */
+    url('assets/hero-bg.jpg');
   background-size:cover; background-position:center;
   filter:saturate(.95);
 }
@@ -31,9 +32,8 @@ body{
 .avatar{
   width:220px; height:220px; object-fit:cover; border-radius:999px;
   box-shadow:0 18px 40px rgba(0,0,0,.45);
-  outline:6px solid rgba(255,255,255,.85);    /* bright ring */
-  margin:0 auto;
-  display:block;
+  outline:6px solid rgba(255,255,255,.85);
+  margin:0 auto; display:block;
 }
 
 h1{
@@ -51,7 +51,7 @@ h1{
   color:#e6edf6;
 }
 
-/* CTA pills (faint white with black text) */
+/* Pills: faint white with black text */
 .cta-row{
   display:flex; gap:.9rem; flex-wrap:wrap; justify-content:center; margin-top:1rem;
 }
@@ -62,13 +62,10 @@ h1{
   text-decoration:none;
   border:1px solid rgba(0,0,0,.35);
   box-shadow:0 8px 22px rgba(0,0,0,.18);
-  transition:transform .12s ease, background .12s ease, box-shadow .12s ease;
+  transition:transform .12s ease, background .12s ease;
   backdrop-filter:saturate(140%) blur(1px);
 }
-.pill-light{
-  background:rgba(255,255,255,.78);
-  color:#0f172a;            /* black/dark text */
-}
+.pill-light{ background:rgba(255,255,255,.78); color:#0f172a; }
 .pill:hover{ transform:translateY(-2px); background:rgba(255,255,255,.9); }
 
 /* Footer */
