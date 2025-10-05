@@ -1,20 +1,42 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Soham | Contact Details</title>
   <meta name="robots" content="noindex,nofollow"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
-  <section style="max-width:1100px;margin:0 auto;padding:2rem 1rem;">
-    <h2 style="margin:.5rem 0 1rem;color:#fff">Contact Details</h2>
-    <ul style="list-style:none;padding:0;line-height:1.9">
-      <li><strong>Email:</strong> <a href="mailto:sbhatdubere@gmail.com" class="pill pill-light">sbhatdubere@gmail.com</a></li>
-      <li><strong>LinkedIn:</strong> <a class="pill pill-light" target="_blank" href="https://www.linkedin.com/in/soham-bhat-dubere-5a982218a/">View Profile</a></li>
-      <li><strong>GitHub:</strong> <a class="pill pill-light" target="_blank" href="https://github.com/sohambhatdubere">github.com/sohambhatdubere</a></li>
-    </ul>
-    <p><a class="pill pill-light" href="index.html">← Back to Home</a></p>
+<body id="top">
+
+  <!-- Smaller hero so it matches your home look -->
+  <header class="hero hero--thin">
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+      <h1>Contact Details</h1>
+      <p class="tagline">Happy to connect for roles in automation, PLC/SCADA, robotics (ROS2), and data-driven reliability.</p>
+
+      <nav class="cta-row">
+        <a class="pill pill-light" href="mailto:sbhatdubere@gmail.com">sbhatdubere@gmail.com</a>
+        <a class="pill pill-light" target="_blank" href="https://www.linkedin.com/in/soham-bhat-dubere-5a982218a/">LinkedIn Profile</a>
+        <a class="pill pill-light" target="_blank" href="https://github.com/sohambhatdubere">GitHub: sohambhatdubere</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container center">
+      <a class="pill pill-light" href="index.html">← Back to Home</a>
+    </div>
   </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Soham A. Bhat Dubere</p>
+    <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
+
