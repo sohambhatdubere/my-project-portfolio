@@ -158,4 +158,41 @@ a:hover { opacity: .9; }
 .exp-actions{ margin-top:.75rem; }
 .pill-sm{ padding:.6rem .9rem; font-size:.95rem; border-radius:999px; }
 
+/* Side-by-side layout that collapses on mobile */
+.split{
+  display:grid;
+  grid-template-columns: 1.2fr .9fr;
+  gap:1rem;
+}
+@media (max-width: 900px){
+  .split{ grid-template-columns: 1fr; }
+}
+
+/* Image cards */
+.img-card{
+  margin:0;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 10px 24px rgba(0,0,0,.28);
+}
+.img-card img{ width:100%; display:block; }
+.img-card figcaption{
+  padding:.55rem .8rem; color:#E4EBF5; font-size:.95rem; text-align:center;
+}
+
+/* Two-up grid for design photos */
+.media-grid{
+  display:grid; gap:1rem;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 700px){
+  .media-grid{ grid-template-columns: 1fr; }
+}
+
+/* Text column spacing */
+.split-text ul{ margin:0; padding-left:1.2rem; }
+
+
 
