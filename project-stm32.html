@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>IoT-Enabled Welding Robot Cell (STM32MP157F)</title>
+  <title>IoT-Enabled Welding Robot Cell (Smart Controller)</title>
   <meta name="robots" content="noindex,nofollow"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
@@ -13,8 +13,8 @@
   <header class="hero hero--thin">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <h1>IoT-Enabled Welding Robot Cell (STM32MP157F Controller)</h1>
-      <p class="tagline">Android HMI → STM32MP157F → Robot | Modbus-TCP bridge with push-button fallback & safety interlocks.</p>
+      <h1>IoT-Enabled Welding Robot Cell (Smart Controller)</h1>
+      <p class="tagline">Android HMI → Smart Controller → Robot | Modbus-TCP bridge with push-button fallback & safety interlocks.</p>
     </div>
   </header>
 
@@ -26,7 +26,7 @@
       <div class="split">
         <div class="split-text">
           <ul>
-            <li>Replaced the traditional PLC with an <strong>STM32MP157F-based master–slave Modbus-TCP/IP controller</strong>, serving as the central control unit of the welding robot cell.</li>
+            <li>Replaced the traditional PLC with a <strong>smart controller–based master–slave Modbus-TCP/IP controller</strong>, serving as the central control unit of the welding robot cell.</li>
             <li>Developed the complete solution architecture covering <strong>register mapping</strong>, <strong>command logic</strong>, <strong>real-time robot monitoring</strong>, and <strong>safety logic</strong> for reliable operation.</li>
             <li>Built an <strong>Android HMI interface</strong> for robot program execution, <strong>servo control</strong>, <strong>alarm reset</strong>, and <strong>production count tracking</strong>, enabling IoT-style supervisory control.</li>
           </ul>
@@ -34,7 +34,7 @@
 
         <!-- Control Architecture image -->
         <figure class="img-card">
-          <img src="assets/stm32-ctrl-arch.png" alt="Control Architecture: Android ↔ STM32MP157F ↔ Robot"/>
+          <img src="assets/Control%20Architecture.png" alt="Control Architecture: Android ↔ Smart Controller ↔ Robot"/>
           <figcaption>Control Architecture</figcaption>
         </figure>
       </div>
@@ -45,20 +45,20 @@
         <!-- Design photos -->
         <div class="media-grid">
           <figure class="img-card">
-            <img src="assets/stm32-design-1.jpg" alt="STM32 cell design – panel/HMI view"/>
+            <img src="assets/Design%20GRIC%20cell%20.jpeg" alt="Cell design – panel/HMI view"/>
             <figcaption>Panel / HMI Design</figcaption>
           </figure>
           <figure class="img-card">
-            <img src="assets/stm32-design-2.jpg" alt="STM32 cell design – wiring/IO layout"/>
+            <img src="assets/Design%20GRIC%202.jpeg" alt="Cell design – wiring/IO layout"/>
             <figcaption>IO & Wiring Layout</figcaption>
           </figure>
         </div>
 
         <div class="split-text">
           <ul>
-            <li>Configured the <strong>STM32MP157F</strong> to act as a <strong>Modbus-TCP client to the robot</strong> and a <strong>Modbus-TCP server to the Android HMI</strong>, forming a reliable master–slave bridge that enables full bidirectional communication.</li>
-            <li>Ensured continuous robot cell operation even if <strong>Wi-Fi or the Android tablet disconnects</strong>, by keeping the STM32 persistently connected to the robot and allowing control through <strong>physical push-buttons</strong>.</li>
-            <li>Created <strong>systemd service files</strong> on the STM32MP157F to automatically start the <strong>Ethernet</strong>, <strong>Wi-Fi</strong>, and <strong>Python control script</strong> during boot-up, with proper dependency ordering and <strong>auto-restart</strong> policies for reliability.</li>
+            <li>Configured the <strong>smart controller</strong> to act as a <strong>Modbus-TCP client to the robot</strong> and a <strong>Modbus-TCP server to the Android HMI</strong>, forming a reliable master–slave bridge that enables full bidirectional communication.</li>
+            <li>Ensured continuous robot cell operation even if <strong>Wi-Fi or the Android tablet disconnects</strong>, by keeping the smart controller persistently connected to the robot and allowing control through <strong>physical push-buttons</strong>.</li>
+            <li>Created <strong>systemd service files</strong> on the smart controller to automatically start the <strong>Ethernet</strong>, <strong>Wi-Fi</strong>, and <strong>Python control script</strong> during boot-up, with proper dependency ordering and <strong>auto-restart</strong> policies for reliability.</li>
           </ul>
         </div>
       </div>
@@ -68,8 +68,8 @@
       <div class="split">
         <div class="split-text">
           <ul>
-            <li><strong>75% reduction in control system material cost</strong> by replacing the PLC/IPC layer with the STM32MP157F controller.</li>
-            <li>Improved <strong>cycle stability and responsiveness</strong> through persistent Modbus-TCP communication and local execution on the STM32.</li>
+            <li><strong>75% reduction in control system material cost</strong> by replacing the PLC/IPC layer with the smart controller.</li>
+            <li>Improved <strong>cycle stability and responsiveness</strong> through persistent Modbus-TCP communication and local execution on the smart controller.</li>
             <li><strong>Robust, Wi-Fi-independent architecture</strong> that maintains full robot operation through physical push-buttons even during Android disconnects.</li>
             <li>Flexible, <strong>service-oriented controller</strong> that can be extended for additional cells or future integrations.</li>
           </ul>
@@ -77,10 +77,17 @@
 
         <!-- Final part image -->
         <figure class="img-card">
-          <img src="assets/stm32-final-part.jpg" alt="Finished welded part / final cell output"/>
+          <img src="assets/GRIC%20FINAL%20CELL%20.jpeg" alt="Finished welded part / final cell output"/>
           <figcaption>Final Part / Cell Output</figcaption>
         </figure>
       </div>
+
+      <!-- Optional: project video (replace filename if different) -->
+      <h2 style="color:#fff;margin:1.6rem 0 1rem;">Demo Video</h2>
+      <video controls style="width:100%;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.35);background:#000">
+        <source src="assets/demo-smart.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
 
       <p class="center" style="margin-top:1.25rem">
         <a class="pill pill-light" href="projects.html">← Back to Projects</a>
@@ -98,4 +105,3 @@
   <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
-
