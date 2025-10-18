@@ -194,5 +194,22 @@ a:hover { opacity: .9; }
 /* Text column spacing */
 .split-text ul{ margin:0; padding-left:1.2rem; }
 
+/* Larger, uniform media for architecture/design and how section */
+.media-grid--large {
+  grid-template-columns: 1fr 1fr;
+}
+
+.media-grid--large .img-card img {
+  width: 100%;
+  height: 420px;           /* big and even */
+  object-fit: cover;       /* crop nicely */
+}
+
+@media (max-width: 900px){
+  .media-grid--large .img-card img {
+    height: 260px;         /* smaller on mobile */
+  }
+}
+
 
 
