@@ -1,1 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>6D Pose Estimation — ABB GoFa</title>
+  <meta name="robots" content="noindex,nofollow"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body id="top">
+
+  <!-- Hero -->
+  <header class="hero hero--thin">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>6D Pose Estimation & Material Handling — ABB GoFa</h1>
+      <p class="tagline">YOLO + ArUco + RealSense → Python socket → RAPID; cycle-based quaternion logic (Rz) with offset mapping.</p>
+      <nav class="cta-row" style="margin-top:.6rem">
+        <a class="pill pill-light" href="index.html">Home</a>
+        <a class="pill pill-light" href="experience.html">Experience</a>
+        <a class="pill pill-light" href="project-stm32.html">STM32 Cell</a>
+        <a class="pill pill-light" href="project-sorting.html">Sorting</a>
+        <a class="pill pill-light" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- WHAT -->
+      <h2 style="color:#fff;margin:0 0 1rem;">What</h2>
+      <div class="split">
+        <div class="split-text">
+          <ul>
+            <li>Vision-guided **6D pose** pick-and-place cell using ABB GoFa for varied part orientations.</li>
+            <li>Eliminates frequent re-teaching by detecting object **position + orientation** in real-time.</li>
+            <li>Cycle logic: **Cycles 1–3** keep fixed quaternion (X/Y offsets applied), **Cycle 4** applies quaternion from **Cycle-3 Rz**.</li>
+          </ul>
+        </div>
+
+        <!-- Control Architecture + Cell Design (dummy images) -->
+        <div class="media-grid">
+          <figure class="img-card">
+            <img src="assets/vision-control-architecture.png" alt="Control Architecture: Camera ↔ Python ↔ RAPID ↔ GoFa (dummy)"/>
+            <figcaption>🧭 Control Architecture (placeholder)</figcaption>
+          </figure>
+          <figure class="img-card">
+            <img src="assets/vision-cell-design.jpg" alt="Cell design / layout (dummy)"/>
+            <figcaption>🧩 Cell Design (placeholder)</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- HOW -->
+      <h2 style="color:#fff;margin:1.6rem 0 1rem;">How</h2>
+      <div class="split">
+        <!-- ArUco image + Cell photo (dummy) -->
+        <div class="media-grid">
+          <figure class="img-card">
+            <img src="assets/vision-aruco-marker.jpg" alt="ArUco marker detection overlay (dummy)"/>
+            <figcaption>🎯 ArUco Marker Overlay (placeholder)</figcaption>
+          </figure>
+          <figure class="img-card">
+            <img src="assets/vision-cell-photo.jpg" alt="GoFa cell photo (dummy)"/>
+            <figcaption>📸 GoFa Cell Photo (placeholder)</figcaption>
+          </figure>
+        </div>
+
+        <div class="split-text">
+          <ul>
+            <li>Integrated **YOLO pose + ArUco marker detection** on Intel RealSense for **real-time 6D pose**.</li>
+            <li>**Python ↔ ABB RAPID** via TCP socket for live pose streaming and state sync.</li>
+            <li>Rigorous **camera↔robot frame calibration** (PnP/hand-eye) for spatial alignment.</li>
+            <li>**Cycle-based control** with **Rz-axis quaternion interpolation** and **offset mapping** for smooth tool orientation.</li>
+            <li>Performed **PnP-based post-processing with Canny edge detection** to validate edges, filter outliers, and stabilize orientation estimates before sending to RAPID.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- RESULTS -->
+      <h2 style="color:#fff;margin:1.6rem 0 1rem;">Results</h2>
+      <div class="split">
+        <div class="split-text">
+          <ul>
+            <li>**Sub-cm positional** and **stable orientation** accuracy across cycles.</li>
+            <li>**40% reduction** in pose-switching lag via cycle logic + quaternion handling.</li>
+            <li>Modular cell: easy to retarget for new parts with minimal re-teach.</li>
+          </ul>
+        </div>
+
+        <!-- 3D Pick & Place Video (dummy) -->
+        <figure class="img-card">
+          <video controls style="width:100%;display:block;background:#000">
+            <source src="assets/vision-3d-pickplace.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>🎥 3D Pick & Place Demo (placeholder)</figcaption>
+        </figure>
+      </div>
+
+      <!-- Overall video at the bottom (dummy) -->
+      <h2 style="color:#fff;margin:1.6rem 0 1rem;">Overall Cell Demo</h2>
+      <video controls style="width:100%;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.35);background:#000">
+        <source src="assets/vision-overall-demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <p class="center" style="margin-top:1.25rem">
+        <a class="pill pill-light" href="experience.html">Work Experience</a>
+        <a class="pill pill-light" href="index.html">Home</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Soham A. Bhat Dubere</p>
+    <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
 
