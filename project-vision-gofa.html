@@ -6,6 +6,12 @@
   <title>6D Pose Estimation and Material Handling with ABB GoFa Cobot</title>
   <meta name="robots" content="noindex,nofollow"/>
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Uniform larger images for architecture/design and how-section */
+    .media-grid--large { grid-template-columns: 1fr 1fr; }
+    .media-grid--large .img-card img { width:100%; height:420px; object-fit:cover; }
+    @media (max-width:900px){ .media-grid--large .img-card img { height:260px; } }
+  </style>
 </head>
 <body id="top">
 
@@ -14,14 +20,8 @@
     <div class="hero-bg"></div>
     <div class="hero-content">
       <h1>6D Pose Estimation and Material Handling with ABB GoFa Cobot</h1>
-      <p class="tagline">Real-time vision-guided handling system integrating Intel RealSense, YOLO, and ArUco marker detection with ABB GoFa.</p>
-      <nav class="cta-row" style="margin-top:.6rem">
-        <a class="pill pill-light" href="index.html">Home</a>
-        <a class="pill pill-light" href="experience.html">Experience</a>
-        <a class="pill pill-light" href="project-stm32.html">STM32 Cell</a>
-        <a class="pill pill-light" href="project-sorting.html">Sorting</a>
-        <a class="pill pill-light" href="contact.html">Contact</a>
-      </nav>
+      <p class="tagline">Vision-guided handling using Intel RealSense, YOLO, and ArUco with Python to ABB RAPID communication.</p>
+      <!-- Top nav intentionally removed -->
     </div>
   </header>
 
@@ -32,18 +32,22 @@
       <h2 style="color:#fff;margin:0 0 1rem;">Why</h2>
       <div class="split">
         <div class="split-text">
-          <p>Traditional pick and place applications relied on fixed positions, which made them inefficient when handling multiple parts with variable orientations. There was a need for a real-time, vision-guided control system that could adapt dynamically to the object position and orientation without constant manual re-teaching. The objective of this project was to achieve high-precision and fully automated material handling through 6D pose estimation integrated with the ABB GoFa collaborative robot.</p>
+          <ul>
+            <li>Traditional pick and place relied on fixed points, making it inefficient for multi-part handling or variable orientations.</li>
+            <li>Needed a real time vision guided control system to adapt dynamically to object position and orientation.</li>
+            <li>The goal was to achieve high precision material handling without manual re teaching between cycles.</li>
+          </ul>
         </div>
 
-        <!-- Control Architecture + Cell Design (dummy images) -->
-        <div class="media-grid">
+        <!-- Bigger, uniform images -->
+        <div class="media-grid media-grid--large">
           <figure class="img-card">
-            <img src="assets/vision-control-architecture.png" alt="Control Architecture: Camera to Python to RAPID to GoFa (placeholder)"/>
+            <img src="assets/vision-control-architecture.png" alt="Control architecture placeholder"/>
             <figcaption>Control Architecture (placeholder)</figcaption>
           </figure>
           <figure class="img-card">
-            <img src="assets/vision-cell-design.jpg" alt="Cell design layout (placeholder)"/>
-            <figcaption>Design of the Cell (placeholder)</figcaption>
+            <img src="assets/vision-cell-design.jpg" alt="Cell design placeholder"/>
+            <figcaption>Cell Design (placeholder)</figcaption>
           </figure>
         </div>
       </div>
@@ -51,20 +55,24 @@
       <!-- HOW -->
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">How</h2>
       <div class="split">
-        <!-- ArUco + Cell Photo (dummy) -->
-        <div class="media-grid">
+        <div class="media-grid media-grid--large">
           <figure class="img-card">
-            <img src="assets/vision-aruco-marker.jpg" alt="ArUco marker detection (placeholder)"/>
+            <img src="assets/vision-aruco-marker.jpg" alt="ArUco marker detection placeholder"/>
             <figcaption>ArUco Marker Detection (placeholder)</figcaption>
           </figure>
           <figure class="img-card">
-            <img src="assets/vision-cell-photo.jpg" alt="GoFa vision cell photo (placeholder)"/>
+            <img src="assets/vision-cell-photo.jpg" alt="GoFa vision cell placeholder"/>
             <figcaption>Vision Cell (placeholder)</figcaption>
           </figure>
         </div>
 
         <div class="split-text">
-          <p>The system integrated YOLO pose estimation and ArUco marker detection using Intel RealSense depth data to achieve real-time six-degree-of-freedom pose estimation. Two-dimensional and three-dimensional path tracing routines were designed using Python socket communication with ABB RAPID in RobotStudio to enhance trajectory control. The camera-to-robot coordinate frames were calibrated to maintain consistent spatial accuracy across multiple cycles. Cycle-based control logic was implemented with Rz-axis quaternion interpolation and offset mapping to ensure smooth tool orientation transitions. Post-processing was performed using perspective-n-point (PnP) computation combined with Canny edge detection to validate object boundaries, remove outliers, and stabilize orientation estimates before sending data to the robot controller.</p>
+          <ul>
+            <li>Integrated YOLO pose and ArUco marker detection for 6D pose estimation using Intel RealSense depth data.</li>
+            <li>Developed 2D and 3D trajectory routines with Python to ABB RAPID socket communication for synchronized motion.</li>
+            <li>Performed camera to robot frame calibration to maintain spatial alignment across cycles.</li>
+            <li>Implemented cycle based control logic with Rz axis quaternion interpolation and offset mapping, ensuring smooth transitions and accurate orientation.</li>
+          </ul>
         </div>
       </div>
 
@@ -72,4 +80,42 @@
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">Results</h2>
       <div class="split">
         <div class="split-text">
-          <p>The system achieved sub-centimeter positional accuracy and stable orientation control across multiple pick and place cycles. Pose-switching lag was reduced by approximately forty percent, resulting in improved real-time response and smoother robot motion. The final implementation delivered a modular, vision-integrated robotic cell that can be deploy
+          <ul>
+            <li>Achieved sub centimeter positional accuracy and stable orientation control across multiple pick and place cycles.</li>
+            <li>Reduced pose switching lag by 40 percent, improving real time response and reliability.</li>
+            <li>Delivered a modular vision integrated cobot cell deployable across multiple workflows.</li>
+          </ul>
+        </div>
+
+        <!-- 3D Pick and Place Video (placeholder) -->
+        <figure class="img-card">
+          <video controls style="width:100%;display:block;background:#000">
+            <source src="assets/vision-3d-pickplace.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>3D Pick and Place Demonstration (placeholder)</figcaption>
+        </figure>
+      </div>
+
+      <!-- Overall video at the bottom (placeholder) -->
+      <h2 style="color:#fff;margin:1.6rem 0 1rem;">Overall Cell Demonstration</h2>
+      <video controls style="width:100%;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.35);background:#000">
+        <source src="assets/vision-overall-demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <p class="center" style="margin-top:1.25rem">
+        <a class="pill pill-light" href="experience.html">Work Experience</a>
+        <a class="pill pill-light" href="index.html">Home</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Soham A. Bhat Dubere</p>
+    <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
