@@ -1,1 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>PI Conveyor – Object Sorting Mechanism</title>
+  <meta name="robots" content="noindex,nofollow"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Adjust image behavior for full visibility */
+    .media-grid--large .img-card img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      background: #000;
+    }
+    /* Vertical video optimization for mobile format */
+    .vertical-video {
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.35);
+      background: #000;
+    }
+    @media (max-width:600px){
+      .vertical-video{ max-width: 100%; }
+    }
+  </style>
+</head>
+<body id="top">
+
+  <!-- Hero -->
+  <header class="hero hero--thin">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>PI Conveyor – Object Sorting Mechanism</h1>
+      <p class="tagline">Mini automation model demonstrating PLC-based sorting using Allen-Bradley RSLogix 500 and FactoryTalk View HMI.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- WHAT -->
+      <h2 style="color:#fff;margin:0 0 1rem;">What</h2>
+      <div class="split">
+        <div class="split-text">
+          <ul>
+            <li>Manual part sorting on the prototype conveyor was error-prone and inconsistent, especially at varying conveyor speeds.</li>
+            <li>Needed a compact, automated working model to demonstrate real-time sorting using sensors and pneumatic actuation.</li>
+            <li>The objective was to design a functional, educational setup showcasing PLC control, sensor integration, and HMI monitoring.</li>
+          </ul>
+        </div>
+
+        <div class="media-grid media-grid--large">
+          <figure class="img-card">
+            <img src="assets/PI%20LADDER%20DESIGN%20.jpg" alt="PI Ladder Logic Design"/>
+            <figcaption>PI Ladder Design</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- HOW -->
+      <h2 style="color:#fff;margin:1.6rem 0 1rem;">How</h2>
+      <div class="split">
+        <div class="split-text">
+          <ul>
+            <li>Designed a mini conveyor system using photoelectric and inductive sensors to detect object type and position.</li>
+            <li>Programmed an Allen-Bradley MicroLogix PLC in RSLogix 500 to handle object detection, timing, and actuation sequences.</li>
+            <li>Controlled a double-acting pneumatic cylinder for rejection using solenoid valves, ensuring synchronized operation with conveyor movement.</li>
+            <li>Developed a FactoryTalk View HMI for mode selection (Auto / Manual), live sensor feedback, and alarm display.</li>
+            <li>Optimized rung logic for minimal scan delay and implemented interlocks to prevent double actuation or missed parts.</li>
+          </ul>
+        </div>
+
+        <div class="media-grid media-grid--large">
+          <figure class="img-card">
+            <img src="assets/PI%20PROJECT%20SCADA.jpg" alt="PI Project SCADA Screen"/>
+            <figcaption>PI SCADA Screen</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- RESULTS -->
+      <h2 style="color:#fff;margin:1.6rem 0 1rem;">Results</h2>
+      <div class="split">
+        <div class="split-text">
+          <ul>
+            <li>Successfully achieved automated sorting of multiple objects based on sensor inputs in real-time.</li>
+            <li>Demonstrated reliable PLC–HMI communication with smooth control over sensors and pneumatic components.</li>
+            <li>Reduced PLC scan cycle time by approximately 20 percent, resulting in faster and more responsive operation.</li>
+            <li>Improved system repeatability and reduced sorting time variability, making it ideal for academic demonstrations and practical automation training.</li>
+            <li>Provided a strong foundation for scaling toward larger industrial conveyor automation systems.</li>
+          </ul>
+        </div>
+
+        <div class="media-grid media-grid--large">
+          <figure class="img-card">
+            <img src="assets/Conveyor%20Image.HEIC" alt="PI Conveyor Working Model"/>
+            <figcaption>PI Conveyor Working Model</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- FINAL VIDEO -->
+      <h2 style="color:#fff;margin:1.6rem 0 1rem;">PI Conveyor Final Working Video</h2>
+      <video class="vertical-video" controls>
+        <source src="assets/PI_Conveyor_Final_Project_Video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <p class="center" style="margin-top:1.25rem">
+        <a class="pill pill-light" href="experience.html">Work Experience</a>
+        <a class="pill pill-light" href="index.html">Home</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Soham A. Bhat Dubere</p>
+    <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
