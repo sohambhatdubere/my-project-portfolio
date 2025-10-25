@@ -7,16 +7,12 @@
   <meta name="robots" content="noindex,nofollow"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    /* Ensure this page never overrides the no-crop behavior */
+    /* Ensure this page never reintroduces cropping */
     .media-grid--large .img-card img{
       width:100% !important;
       height:auto !important;
-      max-height:520px !important;
       object-fit:contain !important;
       background:#000;
-    }
-    @media (max-width:900px){
-      .media-grid--large .img-card img{ max-height:360px !important; }
     }
   </style>
 </head>
@@ -46,9 +42,9 @@
           </ul>
         </div>
 
-        <!-- Control Architecture + Cell Design -->
+        <!-- Control Architecture (slightly larger) + Cell Design (standard) -->
         <div class="media-grid media-grid--large">
-          <figure class="img-card">
+          <figure class="img-card img-card--lg">
             <img src="assets/CONTROL%20ARCHITECTURE%20.jpg" alt="Control Architecture"/>
             <figcaption>Control Architecture</figcaption>
           </figure>
