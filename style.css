@@ -96,9 +96,7 @@ a { color: #E4EBF5; }
 a:hover { opacity: .9; }
 
 /* ==== Work Experience cards ==== */
-.exp-grid{
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem;
-}
+.exp-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; }
 .exp-card{
   background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12);
   border-radius:16px; padding:1.1rem 1.2rem 1.0rem; box-shadow:0 10px 24px rgba(0,0,0,.28);
@@ -148,4 +146,12 @@ a:hover { opacity: .9; }
 }
 @media (max-width:900px){
   .media-grid--large .img-card img{ max-height:360px; }
+}
+
+/* NEW: slightly larger variant just for Control Architecture */
+.img-card--lg img{
+  max-height:620px !important;   /* a bit taller than the default 520px */
+}
+@media (max-width:900px){
+  .img-card--lg img{ max-height:420px !important; }
 }
