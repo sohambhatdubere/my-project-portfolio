@@ -5,7 +5,7 @@ body{
   margin:0;
   font-family:system-ui,Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   color:#E9EEF6;
-  background:#000;                 /* <- solid black page background */
+  background:#000;
 }
 
 /* ===== Hero (black overlay, crisp contrast) ===== */
@@ -23,12 +23,11 @@ body{
 .hero-bg{
   position:absolute; inset:0;
   background-image:
-    /* black-to-black gradient (no blue tint) */
     linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.92)),
     url('assets/hero-bg.jpg');
   background-size:cover;
   background-position:center;
-  filter:brightness(.75);          /* deepen blacks, keep detail */
+  filter:brightness(.75);
 }
 
 .hero-content{
@@ -41,7 +40,7 @@ body{
   width:220px; height:220px;
   object-fit:cover; border-radius:999px;
   box-shadow:0 18px 40px rgba(0,0,0,.55);
-  outline:6px solid rgba(255,255,255,.9);   /* bright ring */
+  outline:6px solid rgba(255,255,255,.9);
   margin:0 auto 1rem; display:block;
 }
 
@@ -60,30 +59,16 @@ h1{
   color:#E4EBF5;
 }
 
-/* ===== Pills: faint white with black text ===== */
-.cta-row{
-  display:flex; gap:1rem; flex-wrap:wrap;
-  justify-content:center; margin-top:1rem;
-}
+/* ===== Pills ===== */
+.cta-row{ display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; margin-top:1rem; }
 .pill{
-  display:inline-block;
-  padding:.95rem 1.35rem;
-  border-radius:999px;
-  text-decoration:none;
-  border:1px solid rgba(0,0,0,.45);
-  box-shadow:0 10px 24px rgba(0,0,0,.28);
+  display:inline-block; padding:.95rem 1.35rem; border-radius:999px; text-decoration:none;
+  border:1px solid rgba(0,0,0,.45); box-shadow:0 10px 24px rgba(0,0,0,.28);
   transition:transform .12s ease, background .12s ease, box-shadow .12s ease;
   backdrop-filter:saturate(140%) blur(1px);
 }
-.pill-light{
-  background:rgba(255,255,255,.85); /* faint white */
-  color:#0E1220;                    /* near-black text */
-}
-.pill:hover{
-  transform:translateY(-2px);
-  background:rgba(255,255,255,.95);
-  box-shadow:0 14px 28px rgba(0,0,0,.34);
-}
+.pill-light{ background:rgba(255,255,255,.85); color:#0E1220; }
+.pill:hover{ transform:translateY(-2px); background:rgba(255,255,255,.95); box-shadow:0 14px 28px rgba(0,0,0,.34); }
 
 /* ===== Footer ===== */
 .footer{
@@ -91,105 +76,61 @@ h1{
   padding:1rem 1rem;
   color:#C7D1DE;
   display:flex; align-items:center; justify-content:space-between;
-  background:#000;                  /* keep footer pure black too */
+  background:#000;
 }
 .to-top{
   display:inline-flex; width:40px; height:40px; align-items:center; justify-content:center;
   border-radius:999px; background:#fff; color:#0f172a; text-decoration:none;
   box-shadow:0 8px 18px rgba(0,0,0,.35);
 }
+
 /* Thin variant of the hero for inner pages */
 .hero--thin { min-height: 52vh; }
 
-/* Simple section + layout helpers for inner pages */
+/* Section + layout helpers */
 .section { padding: 2.5rem 1rem; background:#000; }
 .container { max-width: 1100px; margin: 0 auto; }
 .center { text-align: center; }
 
-/* Optional: make links on dark bg look consistent when not using pills */
 a { color: #E4EBF5; }
 a:hover { opacity: .9; }
 
 /* ==== Work Experience cards ==== */
 .exp-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:1rem;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem;
 }
-
 .exp-card{
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:16px;
-  padding:1.1rem 1.2rem 1.0rem;
-  box-shadow:0 10px 24px rgba(0,0,0,.28);
+  background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12);
+  border-radius:16px; padding:1.1rem 1.2rem 1.0rem; box-shadow:0 10px 24px rgba(0,0,0,.28);
 }
-
-.exp-head{
-  display:flex;
-  align-items:center;
-  gap:.8rem;
-  margin-bottom:.4rem;
-}
-
+.exp-head{ display:flex; align-items:center; gap:.8rem; margin-bottom:.4rem; }
 .icon-badge{
-  width:48px; height:48px; border-radius:999px;
-  display:grid; place-items:center;
-  background:#fff; color:#0E1220; font-size:24px;
-  box-shadow:0 8px 18px rgba(0,0,0,.25);
+  width:48px; height:48px; border-radius:999px; display:grid; place-items:center;
+  background:#fff; color:#0E1220; font-size:24px; box-shadow:0 8px 18px rgba(0,0,0,.25);
 }
-
-.exp-card h3{
-  margin:0; color:#fff; font-size:1.1rem; letter-spacing:.2px;
-}
+.exp-card h3{ margin:0; color:#fff; font-size:1.1rem; letter-spacing:.2px; }
 .exp-meta{ color:#C7D1DE; font-size:.95rem; }
-
-.exp-card p{
-  margin:.45rem 0 0;
-  color:#E4EBF5;
-  line-height:1.6;
-}
-
-/* Section + container helpers (if not already present) */
-.section{ padding:2.5rem 1rem; background:#000; }
-.container{ max-width:1100px; margin:0 auto; }
-.center{ text-align:center; }
+.exp-card p{ margin:.45rem 0 0; color:#E4EBF5; line-height:1.6; }
 
 .exp-actions{ margin-top:.75rem; }
 .pill-sm{ padding:.6rem .9rem; font-size:.95rem; border-radius:999px; }
 
-/* Side-by-side layout that collapses on mobile */
-.split{
-  display:grid;
-  grid-template-columns: 1.2fr .9fr;
-  gap:1rem;
-}
-@media (max-width: 900px){
-  .split{ grid-template-columns: 1fr; }
-}
+/* Side-by-side split */
+.split{ display:grid; grid-template-columns: 1.2fr .9fr; gap:1rem; }
+@media (max-width: 900px){ .split{ grid-template-columns: 1fr; } }
 
 /* Image cards */
 .img-card{
-  margin:0;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 10px 24px rgba(0,0,0,.28);
+  margin:0; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12);
+  border-radius:14px; overflow:hidden; box-shadow:0 10px 24px rgba(0,0,0,.28);
 }
 .img-card img{ width:100%; display:block; }
-.img-card figcaption{
-  padding:.55rem .8rem; color:#E4EBF5; font-size:.95rem; text-align:center;
-}
+.img-card figcaption{ padding:.55rem .8rem; color:#E4EBF5; font-size:.95rem; text-align:center; }
+.img-card video { width:100%; display:block; background:#000; }
 
-/* Two-up grid for design photos */
-.media-grid{
-  display:grid; gap:1rem;
-  grid-template-columns: 1fr 1fr;
-}
-@media (max-width: 700px){
-  .media-grid{ grid-template-columns: 1fr; }
-}
+/* Media grids */
+.media-grid{ display:grid; gap:1rem; grid-template-columns: 1fr 1fr; }
+@media (max-width: 700px){ .media-grid{ grid-template-columns: 1fr; } }
 
 /* Text column spacing */
 .split-text ul{ margin:0; padding-left:1.2rem; }
@@ -197,20 +138,14 @@ a:hover { opacity: .9; }
 /* Larger, uniform media for architecture/design and how section */
 .media-grid--large { grid-template-columns: 1fr 1fr; }
 
-/* === UPDATED: show full images (no cropping), like STM32 === */
-.media-grid--large .img-card img {
-  width: 100%;
-  height: auto;          /* keep natural aspect ratio */
-  max-height: 520px;     /* consistent cap on desktop */
-  object-fit: contain;   /* letterbox instead of crop */
-  background: #000;      /* blends with theme behind letterbox bars */
+/* Show full images (no cropping), STM32-style */
+.media-grid--large .img-card img{
+  width:100%;
+  height:auto;
+  max-height:520px;          /* desktop cap */
+  object-fit:contain;        /* letterbox if needed */
+  background:#000;
 }
-
-@media (max-width: 900px){
-  .media-grid--large .img-card img {
-    max-height: 360px;   /* mobile cap */
-  }
+@media (max-width:900px){
+  .media-grid--large .img-card img{ max-height:360px; }
 }
-
-/* Ensure videos inside cards fill width */
-.img-card video { width:100%; display:block; background:#000; }
