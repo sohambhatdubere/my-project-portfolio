@@ -7,12 +7,16 @@
   <meta name="robots" content="noindex,nofollow"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    /* ensure full-image visibility on this page */
-    .media-grid--large .img-card img { width:100%; height:auto; object-fit:contain; background:#000; }
+    /* XL images (no crop, very tall) just for this page */
+    .media-grid--xl{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+    .media-grid--xl .img-card img{
+      width:100%;height:auto;max-height:860px;object-fit:contain;background:#000;
+    }
+    /* On narrow screens, stack full-width */
+    @media (max-width:900px){ .media-grid--xl{grid-template-columns:1fr} }
   </style>
 </head>
 <body id="top">
-
   <header class="hero hero--thin">
     <div class="hero-bg"></div>
     <div class="hero-content">
@@ -23,27 +27,26 @@
 
   <section class="section">
     <div class="container">
-
       <!-- WHAT -->
       <h2 style="color:#fff;margin:0 0 1rem;">What</h2>
       <div class="split">
         <div class="split-text">
           <ul>
-            <li>Automated a manual stencil-based electro-etch marking step using a compact 3-DOF robotic arm.</li>
+            <li>Automated a manual stencil-based electro-etch step using a compact 3-DOF robotic arm.</li>
             <li>Objective: stabilize dwell time and contact force to reduce non-conformance and operator dependency.</li>
             <li>Delivered a prototype suitable for integration around existing workstations.</li>
           </ul>
         </div>
 
-        <!-- Path Trajectory + Electro-etch photo -->
-        <div class="media-grid media-grid--large">
+        <!-- BIG side-by-side images -->
+        <div class="media-grid--xl">
           <figure class="img-card">
-            <img src="assets/etch_path_trajectory.jpg" alt="Path trajectory via Robo-Analyser"/>
+            <img src="assets/Path%20Trajectory%20Robo-Analyser%20.jpg" alt="Path Trajectory — Robo-Analyser"/>
             <figcaption>Path Trajectory — Robo-Analyser</figcaption>
           </figure>
           <figure class="img-card">
-            <img src="assets/etch_marking_photo.jpg" alt="Electro-etch marking photo"/>
-            <figcaption>Electro-Etch Marking (demo)</figcaption>
+            <img src="assets/Electro%20Etch%20Process%20Overview.jpg" alt="Electro-Etch Marking overview"/>
+            <figcaption>Electro-Etch Marking (overview)</figcaption>
           </figure>
         </div>
       </div>
@@ -54,16 +57,16 @@
         <div class="split-text">
           <ul>
             <li>Modeled the arm in CATIA; planned coverage paths and joint profiles in Robo-Analyser.</li>
-            <li>Implemented closed-loop routines for dwell timing and normal force consistency at the stencil.</li>
+            <li>Implemented closed-loop routines for dwell timing and normal-force consistency at the stencil.</li>
             <li>Integrated a simple electronics stack with Bluetooth control for operator-initiated cycles.</li>
-            <li>Prepared wiring/controls documentation for quick shop-floor deployment and maintenance.</li>
+            <li>Prepared wiring/controls documentation for quick deployment and maintenance.</li>
           </ul>
         </div>
 
-        <!-- CAD model beside How -->
-        <div class="media-grid media-grid--large">
+        <!-- BIG CAD model beside How -->
+        <div class="media-grid--xl">
           <figure class="img-card">
-            <img src="assets/etch_cad_model.jpg" alt="CAD model of the 3-DOF arm"/>
+            <img src="assets/Robot%20CAD%20drawing.jpg" alt="CAD model — 3-DOF robotic arm"/>
             <figcaption>CAD Model — 3-DOF Robotic Arm</figcaption>
           </figure>
         </div>
@@ -80,11 +83,11 @@
           </ul>
         </div>
 
-        <!-- Final image beside Results -->
-        <div class="media-grid media-grid--large">
+        <!-- BIG final image beside Results -->
+        <div class="media-grid--xl">
           <figure class="img-card">
-            <img src="assets/etch_final_result.jpg" alt="Final etched part / setup"/>
-            <figcaption>Final Setup / Etched Part</figcaption>
+            <img src="assets/Final%20Prototype.jpg" alt="Final prototype / etched part"/>
+            <figcaption>Final Setup / Prototype</figcaption>
           </figure>
         </div>
       </div>
@@ -100,7 +103,6 @@
     <p>© <span id="year"></span> Soham A. Bhat Dubere</p>
     <a class="to-top" href="#top" aria-label="Back to top">↑</a>
   </footer>
-
   <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
