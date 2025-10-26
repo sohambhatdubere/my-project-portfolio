@@ -1,16 +1,80 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Soham | Project Information</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Soham | Projects</title>
   <meta name="robots" content="noindex,nofollow"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
-  <section style="max-width:1100px;margin:0 auto;padding:2rem 1rem;">
-    <h2 style="margin:.5rem 0 1rem;color:#fff">Project Information</h2>
-    <p>Each project will include: demo video, control architecture image, Android/STM32 screens, cell design, and <strong>What / How / Results</strong>, plus a link to the GitHub repo.</p>
-    <p><a class="pill pill-light" href="index.html">← Back to Home</a></p>
+<body id="top">
+
+  <!-- HERO -->
+  <header class="hero hero--thin">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Projects</h1>
+      <p class="tagline">Selected builds and design work—concise synopses with links to full What / How / Results pages.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="exp-grid">
+        <!-- Project A: Electro-Etch -->
+        <article class="exp-card">
+          <div class="exp-head">
+            <span class="icon-badge">⚡</span>
+            <div>
+              <h3>Automation of Electro-Etch Marking Process</h3>
+              <div class="exp-meta">@ GE Aerospace</div>
+            </div>
+          </div>
+          <p>
+            Designed a compact 3-DOF robotic arm to automate stencil-based electro-etch marking.
+            Planned trajectories (Robo-Analyser), modeled the arm (CATIA), and integrated Bluetooth control with a
+            simple electronics stack. The prototype stabilized dwell/pressure and is projected to cut non-conformance
+            from ~10% to ~1% at 7,200 parts/month.
+          </p>
+          <div class="exp-actions">
+            <a class="pill pill-light pill-sm" href="project-etch.html">View Details →</a>
+          </div>
+        </article>
+
+        <!-- Project B: 6-Jaw Chuck -->
+        <article class="exp-card">
+          <div class="exp-head">
+            <span class="icon-badge">🛠️</span>
+            <div>
+              <h3>Development of 6-Jaw Chuck for Anti-Polishing Ring</h3>
+              <div class="exp-meta">@ Cooper Corporation</div>
+            </div>
+          </div>
+          <p>
+            Co-developed a six-jaw workholding concept for thin-walled anti-polishing rings with internal slots.
+            Consolidated >6 operations into a single clamp, distributing forces via inner/outer jaws and C-axis jaws to
+            maintain ~20 µm circularity. Result: fewer re-clamps, better yield, and ~50% lower total cost.
+          </p>
+          <div class="exp-actions">
+            <a class="pill pill-light pill-sm" href="project-6jaw.html">View Details →</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="center" style="margin-top:1.6rem">
+        <a class="pill pill-light" href="index.html">← Back to Home</a>
+      </p>
+    </div>
   </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Soham A. Bhat Dubere</p>
+    <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
