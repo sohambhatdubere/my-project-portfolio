@@ -7,11 +7,15 @@
   <meta name="robots" content="noindex,nofollow"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    .media-grid--large .img-card img { width:100%; height:auto; object-fit:contain; background:#000; }
+    /* XL images (no crop, very tall) just for this page */
+    .media-grid--xl{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+    .media-grid--xl .img-card img{
+      width:100%;height:auto;max-height:860px;object-fit:contain;background:#000;
+    }
+    @media (max-width:900px){ .media-grid--xl{grid-template-columns:1fr} }
   </style>
 </head>
 <body id="top">
-
   <header class="hero hero--thin">
     <div class="hero-bg"></div>
     <div class="hero-content">
@@ -22,7 +26,6 @@
 
   <section class="section">
     <div class="container">
-
       <!-- WHAT -->
       <h2 style="color:#fff;margin:0 0 1rem;">What</h2>
       <div class="split">
@@ -34,14 +37,14 @@
           </ul>
         </div>
 
-        <!-- Ring + Circularity image beside What -->
-        <div class="media-grid media-grid--large">
+        <!-- BIG ring + circularity images -->
+        <div class="media-grid--xl">
           <figure class="img-card">
-            <img src="assets/ap_ring_photo.jpg" alt="Anti-polishing ring photo"/>
+            <img src="assets/antipolishing%20ring.jpg" alt="Anti-polishing ring"/>
             <figcaption>Anti-Polishing Ring</figcaption>
           </figure>
           <figure class="img-card">
-            <img src="assets/ap_circularity_check.jpg" alt="Circularity / GD&T check"/>
+            <img src="assets/Circularity.jpg" alt="Circularity / GD&amp;T check"/>
             <figcaption>Circularity / GD&amp;T Check</figcaption>
           </figure>
         </div>
@@ -58,15 +61,15 @@
           </ul>
         </div>
 
-        <!-- Before / After beside How -->
-        <div class="media-grid media-grid--large">
+        <!-- BIG before/after images -->
+        <div class="media-grid--xl">
           <figure class="img-card">
-            <img src="assets/ap_before.jpg" alt="Before — multi-setup approach"/>
-            <figcaption>Before — Multi-Setup</figcaption>
+            <img src="assets/Before%203%20Jaw%20Chuck.jpg" alt="Before — multi-setup (3-jaw)"/>
+            <figcaption>Before — Multi-Setup (3-Jaw)</figcaption>
           </figure>
           <figure class="img-card">
-            <img src="assets/ap_after.jpg" alt="After — single-clamp concept"/>
-            <figcaption>After — Single-Clamp Concept</figcaption>
+            <img src="assets/After%206%20Jaw%20Chuck.jpg" alt="After — single-clamp (6-jaw)"/>
+            <figcaption>After — Single-Clamp (6-Jaw)</figcaption>
           </figure>
         </div>
       </div>
@@ -77,15 +80,15 @@
         <div class="split-text">
           <ul>
             <li>Maintained approximately 20 µm circularity on thin-walled rings during machining.</li>
-            <li>Consolidated >6 operations into a single setup, reducing cycle time and handling error.</li>
+            <li>Consolidated &gt;6 operations into a single setup, reducing cycle time and handling error.</li>
             <li>Lowered overall cost and improved repeatability through better force distribution.</li>
           </ul>
         </div>
 
-        <!-- Final 2D drawing beside Results -->
-        <div class="media-grid media-grid--large">
+        <!-- BIG final 2D drawing -->
+        <div class="media-grid--xl">
           <figure class="img-card">
-            <img src="assets/ap_final_2d_drawing.jpg" alt="Final 2D drawing of chuck"/>
+            <img src="assets/2D%20Complete%20Design.jpg" alt="Final 2D drawing of chuck"/>
             <figcaption>Final 2D Drawing</figcaption>
           </figure>
         </div>
@@ -102,7 +105,6 @@
     <p>© <span id="year"></span> Soham A. Bhat Dubere</p>
     <a class="to-top" href="#top" aria-label="Back to top">↑</a>
   </footer>
-
   <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
