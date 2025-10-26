@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Automation of Electro-Etch Marking Process</title>
+  <meta name="robots" content="noindex,nofollow"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ensure full-image visibility on this page */
+    .media-grid--large .img-card img { width:100%; height:auto; object-fit:contain; background:#000; }
+  </style>
+</head>
+<body id="top">
+
+  <header class="hero hero--thin">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Automation of Electro-Etch Marking Process</h1>
+      <p class="tagline">3-DOF robotic arm + trajectory planning + stable dwell/pressure for repeatable stencil marking.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- WHAT -->
+      <h2 style="color:#fff;margin:0 0 1rem;">What</h2>
+      <div class="split">
+        <div class="split-text">
+          <ul>
+            <li>Automated a manual stencil-based electro-etch marking step using a compact 3-DOF robotic arm.</li>
+            <li>Objective: stabilize dwell time and contact force to reduce non-conformance and operator dependency.</li>
+            <li>Delivered a prototype suitable for integration around existing workstations.</li>
+          </ul>
+        </div>
+
+        <!-- Path Trajectory + Electro-etch photo -->
+        <div class="media-grid media-grid--large">
+          <figure class="img-card">
+            <img src="assets/etch_path_trajectory.jpg" alt="Path trajectory via Robo-Analyser"/>
+            <figcaption>Path Trajectory — Robo-Analyser</figcaption>
+          </figure>
+          <figure class="img-card">
+            <img src="assets/etch_marking_photo.jpg" alt="Electro-etch marking photo"/>
+            <figcaption>Electro-Etch Marking (demo)</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- HOW -->
+      <h2 style="color:#fff;margin:1.6rem 0 1rem;">How</h2>
+      <div class="split">
+        <div class="split-text">
+          <ul>
+            <li>Modeled the arm in CATIA; planned coverage paths and joint profiles in Robo-Analyser.</li>
+            <li>Implemented closed-loop routines for dwell timing and normal force consistency at the stencil.</li>
+            <li>Integrated a simple electronics stack with Bluetooth control for operator-initiated cycles.</li>
+            <li>Prepared wiring/controls documentation for quick shop-floor deployment and maintenance.</li>
+          </ul>
+        </div>
+
+        <!-- CAD model beside How -->
+        <div class="media-grid media-grid--large">
+          <figure class="img-card">
+            <img src="assets/etch_cad_model.jpg" alt="CAD model of the 3-DOF arm"/>
+            <figcaption>CAD Model — 3-DOF Robotic Arm</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- RESULTS -->
+      <h2 style="color:#fff;margin:1.6rem 0 1rem;">Results</h2>
+      <div class="split">
+        <div class="split-text">
+          <ul>
+            <li>Stabilized dwell/pressure and improved end-effector placement repeatability.</li>
+            <li>Large reduction in non-conformance compared with the manual process.</li>
+            <li>Compact, low-cost prototype ready for incremental scale-up at the line.</li>
+          </ul>
+        </div>
+
+        <!-- Final image beside Results -->
+        <div class="media-grid media-grid--large">
+          <figure class="img-card">
+            <img src="assets/etch_final_result.jpg" alt="Final etched part / setup"/>
+            <figcaption>Final Setup / Etched Part</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <p class="center" style="margin-top:1.25rem">
+        <a class="pill pill-light" href="project.html">← Back to Projects</a>
+        <a class="pill pill-light" href="index.html">Home</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Soham A. Bhat Dubere</p>
+    <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
