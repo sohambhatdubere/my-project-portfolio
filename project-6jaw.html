@@ -7,15 +7,13 @@
   <meta name="robots" content="noindex,nofollow"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    /* XL images (no crop, very tall) just for this page */
-    .media-grid--xl{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
-    .media-grid--xl .img-card img{
-      width:100%;height:auto;max-height:860px;object-fit:contain;background:#000;
-    }
-    @media (max-width:900px){ .media-grid--xl{grid-template-columns:1fr} }
+    .img-card img{width:100%;height:auto;object-fit:contain;max-height:520px;background:#000}
+    .media-grid{display:grid;gap:1rem;grid-template-columns:1fr 1fr}
+    @media (max-width:900px){ .img-card img{max-height:360px} .media-grid{grid-template-columns:1fr} }
   </style>
 </head>
 <body id="top">
+
   <header class="hero hero--thin">
     <div class="hero-bg"></div>
     <div class="hero-content">
@@ -26,7 +24,8 @@
 
   <section class="section">
     <div class="container">
-      <!-- WHAT -->
+
+      <!-- WHAT (text L, images R) -->
       <h2 style="color:#fff;margin:0 0 1rem;">What</h2>
       <div class="split">
         <div class="split-text">
@@ -37,8 +36,7 @@
           </ul>
         </div>
 
-        <!-- BIG ring + circularity images -->
-        <div class="media-grid--xl">
+        <div class="media-grid">
           <figure class="img-card">
             <img src="assets/antipolishing%20ring.jpg" alt="Anti-polishing ring"/>
             <figcaption>Anti-Polishing Ring</figcaption>
@@ -50,9 +48,20 @@
         </div>
       </div>
 
-      <!-- HOW -->
+      <!-- HOW (images L, text R) -->
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">How</h2>
       <div class="split">
+        <div class="media-grid">
+          <figure class="img-card">
+            <img src="assets/Before%203%20Jaw%20Chuck.jpg" alt="Before — Multi-Setup (3-Jaw)"/>
+            <figcaption>Before — Multi-Setup (3-Jaw)</figcaption>
+          </figure>
+          <figure class="img-card">
+            <img src="assets/After%206%20Jaw%20Chuck.jpg" alt="After — Single-Clamp (6-Jaw)"/>
+            <figcaption>After — Single-Clamp (6-Jaw)</figcaption>
+          </figure>
+        </div>
+
         <div class="split-text">
           <ul>
             <li>Synchronized inner and outer jaws to distribute clamping forces uniformly across the thin section.</li>
@@ -60,21 +69,9 @@
             <li>Prepared exploded views and 2D drawings to communicate manufacturing and assembly.</li>
           </ul>
         </div>
-
-        <!-- BIG before/after images -->
-        <div class="media-grid--xl">
-          <figure class="img-card">
-            <img src="assets/Before%203%20Jaw%20Chuck.jpg" alt="Before — multi-setup (3-jaw)"/>
-            <figcaption>Before — Multi-Setup (3-Jaw)</figcaption>
-          </figure>
-          <figure class="img-card">
-            <img src="assets/After%206%20Jaw%20Chuck.jpg" alt="After — single-clamp (6-jaw)"/>
-            <figcaption>After — Single-Clamp (6-Jaw)</figcaption>
-          </figure>
-        </div>
       </div>
 
-      <!-- RESULTS -->
+      <!-- RESULTS (text L, image R) -->
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">Results</h2>
       <div class="split">
         <div class="split-text">
@@ -85,13 +82,10 @@
           </ul>
         </div>
 
-        <!-- BIG final 2D drawing -->
-        <div class="media-grid--xl">
-          <figure class="img-card">
-            <img src="assets/2D%20Complete%20Design.jpg" alt="Final 2D drawing of chuck"/>
-            <figcaption>Final 2D Drawing</figcaption>
-          </figure>
-        </div>
+        <figure class="img-card">
+          <img src="assets/2D%20Complete%20Design.jpg" alt="Final 2D drawing of chuck"/>
+          <figcaption>Final 2D Drawing</figcaption>
+        </figure>
       </div>
 
       <p class="center" style="margin-top:1.25rem">
