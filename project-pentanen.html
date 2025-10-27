@@ -7,14 +7,22 @@
   <meta name="robots" content="noindex,nofollow"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    /* Big, no-crop images for this page */
-    .media-grid--xl{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
-    .media-grid--xl .img-card img{width:100%;height:auto;max-height:820px;object-fit:contain;background:#000}
-    @media (max-width:900px){ .media-grid--xl{grid-template-columns:1fr} }
+    /* Match STM32: show full images, no crop, same max-height */
+    .media-grid--large .img-card img{
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      background:#000;
+      max-height:520px;   /* same as STM32 visuals */
+    }
+    @media (max-width:900px){
+      .media-grid--large .img-card img{ max-height:360px; }
+    }
   </style>
 </head>
 <body id="top">
 
+  <!-- Hero -->
   <header class="hero hero--thin">
     <div class="hero-bg"></div>
     <div class="hero-content">
@@ -26,19 +34,20 @@
   <section class="section">
     <div class="container">
 
-      <!-- WHY -->
+      <!-- WHY (text left, images right) -->
       <h2 style="color:#fff;margin:0 0 1rem;">Why</h2>
       <div class="split">
+        <!-- LEFT: text -->
         <div class="split-text">
           <ul>
-            <li>Manual set-ups and basic diagnostics on the bending and sorting lines caused idle time and scrap.</li>
-            <li>Needed a PLC/SCADA-driven solution with simulated validation to accelerate commissioning and reduce rework.</li>
-            <li>Target outcomes: higher throughput on the Crippa bending cell and better sorting quality with faster recovery from faults.</li>
+            <li>Manual set-ups and limited diagnostics on the bending and sorting lines created idle time and scrap.</li>
+            <li>Needed PLC/SCADA with simulated validation to accelerate commissioning and reduce rework.</li>
+            <li>Targets: higher throughput on the Crippa bending cell and better sorting quality with faster fault recovery.</li>
           </ul>
         </div>
 
-        <!-- Optional visuals for WHY (placeholders; swap when ready) -->
-        <div class="media-grid--xl">
+        <!-- RIGHT: images (2-up), sized like STM32 -->
+        <div class="media-grid media-grid--large">
           <figure class="img-card">
             <img src="assets/factory-io-sim.jpg" alt="Factory I/O simulation (placeholder)"/>
             <figcaption>Factory I/O Simulation (placeholder)</figcaption>
@@ -50,21 +59,13 @@
         </div>
       </div>
 
-      <!-- HOW -->
+      <!-- HOW (images left, text right) -->
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">How</h2>
       <div class="split">
-        <div class="split-text">
-          <ul>
-            <li>Programmed Siemens PLC logic and SCADA sequences for a 6-axis Delta robot on a Crippa bending line; validated motion and IO with Factory I/O during prototyping.</li>
-            <li>Built TIA Portal HMI screens for weight-based sorting, using WinCC Trend Configuration to analyze cycle weight/quality and tune thresholds.</li>
-            <li>Implemented structured alarms, diagnostics, and guided recovery, plus role-based navigation and training content.</li>
-            <li>Led on-site induction/commissioning, fixturing, and operator training; captured feedback for iterative HMI/logic refinements.</li>
-          </ul>
-        </div>
-
-        <div class="media-grid--xl">
+        <!-- LEFT: images -->
+        <div class="media-grid media-grid--large">
           <figure class="img-card">
-            <img src="assets/tia-hmi-weight-sorting.jpg" alt="TIA Portal HMI — Weight Sorting (placeholder)"/>
+            <img src="assets/tia-hmi-weight-sorting.jpg" alt="TIA HMI — Weight sorting (placeholder)"/>
             <figcaption>TIA HMI — Weight Sorting (placeholder)</figcaption>
           </figure>
           <figure class="img-card">
@@ -72,21 +73,33 @@
             <figcaption>WinCC Trends — Process Optimization (placeholder)</figcaption>
           </figure>
         </div>
+
+        <!-- RIGHT: text -->
+        <div class="split-text">
+          <ul>
+            <li>Programmed Siemens PLC/SCADA for a 6-axis Delta robot on a Crippa bending line; validated motion/IO with Factory I/O at prototype stage.</li>
+            <li>Built TIA Portal HMI for <strong>weight-based sorting</strong>; used <strong>WinCC Trend Configuration</strong> to analyze cycle weight/quality and tune thresholds.</li>
+            <li>Implemented structured alarms, diagnostics, and guided recovery with role-based navigation and training prompts.</li>
+            <li>Led induction/commissioning, fixturing, and operator training; captured feedback for iterative HMI/logic refinements.</li>
+          </ul>
+        </div>
       </div>
 
-      <!-- RESULTS -->
+      <!-- RESULTS (text left, image right) -->
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">Results</h2>
       <div class="split">
+        <!-- LEFT: text -->
         <div class="split-text">
           <ul>
             <li><strong>~20% production efficiency gain</strong> on the Crippa bending line through Delta-robot PLC/SCADA controls validated in simulation.</li>
             <li><strong>~15% improvement</strong> in sorting accuracy via TIA weight-based logic tuned with WinCC Trends.</li>
-            <li><strong>~30% reduction</strong> in downtime using advanced alarm diagnostics and guided recovery on the HMI.</li>
-            <li>Improved ramp-up and customer adoption through commissioning support, fixturing, and technical training.</li>
+            <li><strong>~30% downtime reduction</strong> from advanced alarm diagnostics and guided recovery on the HMI.</li>
+            <li>Faster ramp-up and adoption via commissioning support, fixturing, and technical training.</li>
           </ul>
         </div>
 
-        <div class="media-grid--xl">
+        <!-- RIGHT: single image -->
+        <div class="media-grid media-grid--large">
           <figure class="img-card">
             <img src="assets/line-efficiency-chart.jpg" alt="Efficiency improvement (placeholder)"/>
             <figcaption>Efficiency Improvement (placeholder)</figcaption>
