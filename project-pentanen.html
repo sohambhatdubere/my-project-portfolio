@@ -7,16 +7,25 @@
   <meta name="robots" content="noindex,nofollow"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    /* Match STM32: show full images, no crop, same max-height */
-    .media-grid--large .img-card img{
+    /* Match STM32 visibility and rhythm */
+    .img-card img{
       width:100%;
       height:auto;
       object-fit:contain;
       background:#000;
-      max-height:520px;   /* same as STM32 visuals */
+      max-height:520px;
     }
     @media (max-width:900px){
-      .media-grid--large .img-card img{ max-height:360px; }
+      .img-card img{ max-height:360px; }
+    }
+    .vertical-video{
+      width:100%;
+      max-width:820px;
+      margin:0 auto;
+      display:block;
+      border-radius:12px;
+      box-shadow:0 10px 24px rgba(0,0,0,.35);
+      background:#000;
     }
   </style>
 </head>
@@ -27,85 +36,71 @@
     <div class="hero-bg"></div>
     <div class="hero-content">
       <h1>Graduate Production Automation Engineer</h1>
-      <p class="tagline">@ Pentanen Engineering &amp; Copper Cloud IoT</p>
+      <p class="tagline">@ Pentanen Engineering &amp; Copper Cloud IoT — Crippa Bending Cell (6-Axis Delta Robot)</p>
     </div>
   </header>
 
   <section class="section">
     <div class="container">
 
-      <!-- WHY (text left, images right) -->
-      <h2 style="color:#fff;margin:0 0 1rem;">Why</h2>
+      <!-- WHAT (text L, image R) -->
+      <h2 style="color:#fff;margin:0 0 1rem;">What</h2>
       <div class="split">
-        <!-- LEFT: text -->
         <div class="split-text">
           <ul>
-            <li>Manual set-ups and limited diagnostics on the bending and sorting lines created idle time and scrap.</li>
-            <li>Needed PLC/SCADA with simulated validation to accelerate commissioning and reduce rework.</li>
-            <li>Targets: higher throughput on the Crippa bending cell and better sorting quality with faster fault recovery.</li>
+            <li>Automated a Crippa bending line with a <strong>6-axis Delta robot</strong> for material handling and cell coordination.</li>
+            <li>Programmed <strong>Siemens PLC/SCADA</strong> and validated sequences in <strong>Factory I/O</strong> during prototyping.</li>
+            <li>Delivered an HMI/SCADA layer with clear states, alarms, and diagnostics to support commissioning and training.</li>
           </ul>
         </div>
 
-        <!-- RIGHT: images (2-up), sized like STM32 -->
-        <div class="media-grid media-grid--large">
-          <figure class="img-card">
-            <img src="assets/factory-io-sim.jpg" alt="Factory I/O simulation (placeholder)"/>
-            <figcaption>Factory I/O Simulation (placeholder)</figcaption>
-          </figure>
-          <figure class="img-card">
-            <img src="assets/delta-robot-overview.jpg" alt="6-axis Delta robot overview (placeholder)"/>
-            <figcaption>6-Axis Delta Robot Overview (placeholder)</figcaption>
-          </figure>
-        </div>
+        <figure class="img-card">
+          <img src="assets/Bending%20cell%20Panel%20.jpeg" alt="Crippa bending cell – automation panel"/>
+          <figcaption>Crippa Bending Cell — Automation Panel</figcaption>
+        </figure>
       </div>
 
-      <!-- HOW (images left, text right) -->
+      <!-- HOW (image L, text R) -->
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">How</h2>
       <div class="split">
-        <!-- LEFT: images -->
-        <div class="media-grid media-grid--large">
-          <figure class="img-card">
-            <img src="assets/tia-hmi-weight-sorting.jpg" alt="TIA HMI — Weight sorting (placeholder)"/>
-            <figcaption>TIA HMI — Weight Sorting (placeholder)</figcaption>
-          </figure>
-          <figure class="img-card">
-            <img src="assets/wincc-trend.jpg" alt="WinCC Trends — process optimization (placeholder)"/>
-            <figcaption>WinCC Trends — Process Optimization (placeholder)</figcaption>
-          </figure>
-        </div>
+        <figure class="img-card">
+          <img src="assets/Cutting%20and%20Parting%20Machine%20.jpeg" alt="Cutting &amp; parting machine integrated with cell"/>
+          <figcaption>Cutting &amp; Parting Machine (Integrated)</figcaption>
+        </figure>
 
-        <!-- RIGHT: text -->
         <div class="split-text">
           <ul>
-            <li>Programmed Siemens PLC/SCADA for a 6-axis Delta robot on a Crippa bending line; validated motion/IO with Factory I/O at prototype stage.</li>
-            <li>Built TIA Portal HMI for <strong>weight-based sorting</strong>; used <strong>WinCC Trend Configuration</strong> to analyze cycle weight/quality and tune thresholds.</li>
-            <li>Implemented structured alarms, diagnostics, and guided recovery with role-based navigation and training prompts.</li>
-            <li>Led induction/commissioning, fixturing, and operator training; captured feedback for iterative HMI/logic refinements.</li>
+            <li>Implemented PLC sequences for infeed/outfeed, robot handshakes, cell interlocks, and safe mode transitions.</li>
+            <li>Mapped IO and coordinated motion timing for the Delta robot relative to the Crippa machine cycle.</li>
+            <li>Built SCADA/HMI screens for setpoints, status, alarms, and guided recovery; used Factory I/O to test logic and IO before site bring-up.</li>
+            <li>Led on-site induction, commissioning, fixturing, and technical training to stabilize production startup.</li>
           </ul>
         </div>
       </div>
 
-      <!-- RESULTS (text left, image right) -->
+      <!-- RESULTS (text L, image R) -->
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">Results</h2>
       <div class="split">
-        <!-- LEFT: text -->
         <div class="split-text">
           <ul>
-            <li><strong>~20% production efficiency gain</strong> on the Crippa bending line through Delta-robot PLC/SCADA controls validated in simulation.</li>
-            <li><strong>~15% improvement</strong> in sorting accuracy via TIA weight-based logic tuned with WinCC Trends.</li>
-            <li><strong>~30% downtime reduction</strong> from advanced alarm diagnostics and guided recovery on the HMI.</li>
-            <li>Faster ramp-up and adoption via commissioning support, fixturing, and technical training.</li>
+            <li><strong>~20% production efficiency gain</strong> on the Crippa bending line through PLC/SCADA control validated in simulation.</li>
+            <li>Reduced idle time with synchronized robot–machine cycles and clearer alarms/diagnostics.</li>
+            <li>Faster ramp-up and smoother changeovers via structured HMI workflows and operator training.</li>
           </ul>
         </div>
 
-        <!-- RIGHT: single image -->
-        <div class="media-grid media-grid--large">
-          <figure class="img-card">
-            <img src="assets/line-efficiency-chart.jpg" alt="Efficiency improvement (placeholder)"/>
-            <figcaption>Efficiency Improvement (placeholder)</figcaption>
-          </figure>
-        </div>
+        <figure class="img-card">
+          <img src="assets/Final%20setup%20view.jpeg" alt="Crippa bending cell — final setup overview"/>
+          <figcaption>Project Overview — Final Setup</figcaption>
+        </figure>
       </div>
+
+      <!-- Demo Video -->
+      <h2 style="color:#fff;margin:1.6rem 0 1rem;">Palletizing Demo Video</h2>
+      <video class="vertical-video" controls>
+        <source src="assets/Vision%20and%20Palletizing%20demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
 
       <p class="center" style="margin-top:1.25rem">
         <a class="pill pill-light" href="experience.html">← Back to Work Experience</a>
