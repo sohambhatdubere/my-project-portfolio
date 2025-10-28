@@ -7,7 +7,6 @@
   <meta name="robots" content="noindex,nofollow"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    /* Match STM32 visibility: big, no crop */
     .img-card img{
       width:100%;
       height:auto;
@@ -18,14 +17,12 @@
     @media (max-width:900px){
       .img-card img{ max-height:360px; }
     }
-    /* Two-up media grid (for HOW images) */
     .media-grid{
       display:grid; gap:1rem;
       grid-template-columns:1fr 1fr;
     }
     @media (max-width:900px){ .media-grid{ grid-template-columns:1fr; } }
 
-    /* Video styled like an image card so it sits "beside" Results */
     .video-card{
       margin:0;
       background:rgba(255,255,255,.06);
@@ -38,7 +35,7 @@
     .video-card video{
       width:100%;
       height:auto;
-      max-height:520px;          /* similar presence to images */
+      max-height:520px;
       background:#000;
       display:block;
     }
@@ -49,7 +46,6 @@
 </head>
 <body id="top">
 
-  <!-- Hero -->
   <header class="hero hero--thin">
     <div class="hero-bg"></div>
     <div class="hero-content">
@@ -61,7 +57,7 @@
   <section class="section">
     <div class="container">
 
-      <!-- WHAT (text left, Control Architecture right) -->
+      <!-- WHAT -->
       <h2 style="color:#fff;margin:0 0 1rem;">What</h2>
       <div class="split">
         <div class="split-text">
@@ -73,17 +69,15 @@
         </div>
 
         <figure class="img-card">
-          <!-- Provided path with URL-encoded spaces -->
           <img src="assets/Fanuc%20Control%20Architecture.jpg" alt="Control Architecture — Fanuc i100C · FX5U · Fronius · Mitsubishi HMI"/>
           <figcaption>Control Architecture</figcaption>
         </figure>
       </div>
 
-      <!-- HOW (images left: HMI + Fanuc cell, text right) -->
+      <!-- HOW -->
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">How</h2>
       <div class="split">
         <div class="media-grid">
-          <!-- These two files should exist in /assets with the exact names below -->
           <figure class="img-card">
             <img src="assets/Mitsubishi_HMI_Screen.jpg" alt="Mitsubishi HMI — weld job setup, alarms, counters"/>
             <figcaption>Mitsubishi HMI Interface</figcaption>
@@ -104,7 +98,7 @@
         </div>
       </div>
 
-      <!-- RESULTS (text left, demo video right) -->
+      <!-- RESULTS -->
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">Results</h2>
       <div class="split">
         <div class="split-text">
@@ -116,12 +110,11 @@
         </div>
 
         <figure class="video-card">
-          <!-- Provided video path with URL-encoded spaces -->
           <video controls>
             <source src="assets/FANUC%20FINAL%20VIDEO%201.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <figcaption>Fanuc Welding Cell — Demo Video</figcaption>
+          <figcaption>Fanuc Dryrun Trial Video</figcaption>
         </figure>
       </div>
 
