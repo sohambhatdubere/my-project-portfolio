@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Fanuc i100C Welding Cell (FX5U + Mitsubishi HMI)</title>
+  <meta name="robots" content="noindex,nofollow"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Match STM32 image visibility: big, no crop */
+    .img-card img{
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      max-height:520px;
+      background:#000;
+    }
+    @media (max-width:900px){
+      .img-card img{ max-height:360px; }
+    }
+    /* Two-up media grid (for HOW images) */
+    .media-grid{
+      display:grid; gap:1rem;
+      grid-template-columns:1fr 1fr;
+    }
+    @media (max-width:900px){ .media-grid{ grid-template-columns:1fr; } }
+
+    /* Video styled like an image card so it sits "beside" Results */
+    .video-card{
+      margin:0;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 10px 24px rgba(0,0,0,.28);
+      display:flex; flex-direction:column;
+    }
+    .video-card video{
+      width:100%;
+      height:auto;
+      max-height:520px;          /* similar presence to images */
+      background:#000;
+      display:block;
+    }
+    .video-card figcaption{
+      padding:.55rem .8rem; color:#E4EBF5; font-size:.95rem; text-align:center;
+    }
+  </style>
+</head>
+<body id="top">
+
+  <!-- Hero -->
+  <header class="hero hero--thin">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Fanuc i100C Welding Cell</h1>
+      <p class="tagline">Fronius power source · Mitsubishi FX5U PLC · Mitsubishi HMI · Ethernet/IP + CC-Link — same application as STM32 cell.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- WHAT (text left, Control Architecture right) -->
+      <h2 style="color:#fff;margin:0 0 1rem;">What</h2>
+      <div class="split">
+        <div class="split-text">
+          <ul>
+            <li>Built a standard robotic welding cell using a <strong>Fanuc i100C</strong> with a <strong>Fronius</strong> power source.</li>
+            <li>Cell control on a <strong>Mitsubishi FX5U PLC</strong> with a <strong>Mitsubishi HMI</strong> for operator workflows.</li>
+            <li>Industrial comms via <strong>Ethernet/IP</strong> (robot/welder) and <strong>CC-Link</strong> (peripherals), mirroring the STM32 cell’s application flow.</li>
+          </ul>
+        </div>
+
+        <figure class="img-card">
+          <img src="assets/Fanuc_Control_Architecture.jpg" alt="Control Architecture — Fanuc i100C · FX5U · Fronius · Mitsubishi HMI"/>
+          <figcaption>Control Architecture</figcaption>
+        </figure>
+      </div>
+
+      <!-- HOW (images left: HMI + Fanuc cell, text right) -->
+      <h2 style="color:#fff;margin:1.6rem 0 1rem;">How</h2>
+      <div class="split">
+        <div class="media-grid">
+          <figure class="img-card">
+            <img src="assets/Mitsubishi_HMI_Screen.jpg" alt="Mitsubishi HMI — weld job setup, alarms, counters"/>
+            <figcaption>Mitsubishi HMI Interface</figcaption>
+          </figure>
+          <figure class="img-card">
+            <img src="assets/Fanuc_Welding_Cell.jpg" alt="Fanuc welding cell — torch, fixture, safety, IO"/>
+            <figcaption>Fanuc Welding Cell</figcaption>
+          </figure>
+        </div>
+
+        <div class="split-text">
+          <ul>
+            <li>Programmed Fanuc jobs for path execution, torch clean, and synchronized weld start/stop with PLC interlocks.</li>
+            <li>FX5U logic for sequence control, safety checks, Fronius handshake, and peripheral coordination over CC-Link.</li>
+            <li>Mitsubishi HMI screens for job selection, cycle control, alarms/history, and maintenance routines.</li>
+            <li>Validated IO timing and ready-state checks prior to commissioning for predictable startup.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- RESULTS (text left, demo video right) -->
+      <h2 style="color:#fff;margin:1.6rem 0 1rem;">Results</h2>
+      <div class="split">
+        <div class="split-text">
+          <ul>
+            <li>Delivered a robust, modular welding cell equivalent in functionality to the STM32-based system.</li>
+            <li>Clear separation of responsibilities: Fanuc (motion/weld), FX5U (cell orchestration/safety), Mitsubishi HMI (visibility/control).</li>
+            <li>Standardized job structures and Ethernet/IP/CC-Link backbone simplify commissioning and future scaling.</li>
+          </ul>
+        </div>
+
+        <figure class="video-card">
+          <video controls>
+            <source src="assets/Fanuc_Welding_Demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Fanuc Welding Cell — Demo Video</figcaption>
+        </figure>
+      </div>
+
+      <p class="center" style="margin-top:1.25rem">
+        <a class="pill pill-light" href="project.html">← Back to Projects</a>
+        <a class="pill pill-light" href="index.html">Home</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Soham A. Bhat Dubere</p>
+    <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>
