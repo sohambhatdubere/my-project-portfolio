@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex,nofollow"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    /* Match STM32 image visibility: big, no crop */
+    /* Match STM32 visibility: big, no crop */
     .img-card img{
       width:100%;
       height:auto;
@@ -67,13 +67,14 @@
         <div class="split-text">
           <ul>
             <li>Built a standard robotic welding cell using a <strong>Fanuc i100C</strong> with a <strong>Fronius</strong> power source.</li>
-            <li>Cell control on a <strong>Mitsubishi FX5U PLC</strong> with a <strong>Mitsubishi HMI</strong> for operator workflows.</li>
-            <li>Industrial comms via <strong>Ethernet/IP</strong> (robot/welder) and <strong>CC-Link</strong> (peripherals), mirroring the STM32 cell’s application flow.</li>
+            <li>Cell control via <strong>Mitsubishi FX5U PLC</strong> and <strong>Mitsubishi HMI</strong> for operator workflows.</li>
+            <li>Industrial comms over <strong>Ethernet/IP</strong> (robot/welder) and <strong>CC-Link</strong> (peripherals), mirroring the STM32 cell’s application flow.</li>
           </ul>
         </div>
 
         <figure class="img-card">
-          <img src="assets/Fanuc_Control_Architecture.jpg" alt="Control Architecture — Fanuc i100C · FX5U · Fronius · Mitsubishi HMI"/>
+          <!-- Provided path with URL-encoded spaces -->
+          <img src="assets/Fanuc%20Control%20Architecture.jpg" alt="Control Architecture — Fanuc i100C · FX5U · Fronius · Mitsubishi HMI"/>
           <figcaption>Control Architecture</figcaption>
         </figure>
       </div>
@@ -82,6 +83,7 @@
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">How</h2>
       <div class="split">
         <div class="media-grid">
+          <!-- These two files should exist in /assets with the exact names below -->
           <figure class="img-card">
             <img src="assets/Mitsubishi_HMI_Screen.jpg" alt="Mitsubishi HMI — weld job setup, alarms, counters"/>
             <figcaption>Mitsubishi HMI Interface</figcaption>
@@ -109,13 +111,14 @@
           <ul>
             <li>Delivered a robust, modular welding cell equivalent in functionality to the STM32-based system.</li>
             <li>Clear separation of responsibilities: Fanuc (motion/weld), FX5U (cell orchestration/safety), Mitsubishi HMI (visibility/control).</li>
-            <li>Standardized job structures and Ethernet/IP/CC-Link backbone simplify commissioning and future scaling.</li>
+            <li>Standardized job structures and Ethernet/IP + CC-Link backbone simplify commissioning and future scaling.</li>
           </ul>
         </div>
 
         <figure class="video-card">
+          <!-- Provided video path with URL-encoded spaces -->
           <video controls>
-            <source src="assets/Fanuc_Welding_Demo.mp4" type="video/mp4">
+            <source src="assets/FANUC%20FINAL%20VIDEO%201.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
           <figcaption>Fanuc Welding Cell — Demo Video</figcaption>
