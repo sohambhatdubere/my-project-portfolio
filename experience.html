@@ -31,9 +31,8 @@
             </div>
           </div>
           <p>
-            Built a connected welding cell around an STM32MP157F edge controller. Implemented I/O handling for welding
-            process control, safety interlocks, and on-device data logging with periodic push to the cloud for traceability
-            and dashboards. Designed the HMI and communication layer for dependable, low-latency operation.
+            Built a connected welding cell around an STM32MP157F edge controller with persistent Modbus-TCP, safety interlocks,
+            and Android HMI for reliable execution and traceability.
           </p>
           <div class="exp-actions">
             <a class="pill pill-light pill-sm" href="project-stm32.html">View Details →</a>
@@ -50,9 +49,8 @@
             </div>
           </div>
           <p>
-            Integrated an RGB-D vision pipeline for part localization and orientation (6D pose) to drive ABB GoFa pick-place tasks.
-            Calibrated camera–robot frames, tuned grasp strategy, and synchronized motion/IO so the cobot could reliably pick varied
-            parts from bins and place them with repeatable accuracy.
+            Integrated RGB-D vision for part localization/orientation to drive reliable GoFa pick-place with calibrated
+            frames and synchronized motion/IO.
           </p>
           <div class="exp-actions">
             <a class="pill pill-light pill-sm" href="project-vision-gofa.html">View Details →</a>
@@ -69,12 +67,30 @@
             </div>
           </div>
           <p>
-            Programmed Siemens PLC/SCADA for a 6-axis Delta robot on a Crippa bending line, validating sequences in Factory I/O
-            and lifting line efficiency by ~20%. Delivered HMI/SCADA, alarms, and diagnostics, and led induction, commissioning,
-            fixturing, and operator training to stabilize production startup.
+            Programmed Siemens PLC/SCADA for a 6-axis Delta robot on a Crippa bending line, validated with Factory I/O,
+            and delivered HMI/diagnostics to stabilize startup.
           </p>
           <div class="exp-actions">
             <a class="pill pill-light pill-sm" href="project-pentanen.html">View Details →</a>
+          </div>
+        </article>
+
+        <!-- NEW: Fanuc i100C Welding Cell (FX5U + Mitsubishi HMI) -->
+        <article class="exp-card">
+          <div class="exp-head">
+            <span class="icon-badge">🟡</span>
+            <div>
+              <h3>Fanuc i100C Welding Cell (FX5U + Mitsubishi HMI)</h3>
+              <div class="exp-meta">@ Irobotics</div>
+            </div>
+          </div>
+          <p>
+            Deployed a standard welding cell using Fanuc i100C and Fronius, orchestrated by a Mitsubishi FX5U PLC with
+            Mitsubishi HMI. Ethernet/IP and CC-Link integrated robot, welder, and peripherals—replicating the STM32 cell’s
+            application on a Fanuc stack with clear interlocks and guided recovery.
+          </p>
+          <div class="exp-actions">
+            <a class="pill pill-light pill-sm" href="project-fanuc.html">View Details →</a>
           </div>
         </article>
       </div>
@@ -90,6 +106,6 @@
     <a class="to-top" href="#top" aria-label="Back to top">↑</a>
   </footer>
 
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
 </body>
 </html>
