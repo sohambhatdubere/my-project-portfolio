@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>PR0001 – Robotic Inspection & Sorting Training Cell</title>
+  <meta name="robots" content="noindex,nofollow"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Reuse the same visual rhythm we used for Fanuc/STM32 */
+    .img-card,
+    .video-card{
+      margin:0;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 10px 24px rgba(0,0,0,.28);
+      display:flex;
+      flex-direction:column;
+    }
+
+    .img-card img,
+    .video-card video{
+      width:100%;
+      height:auto;
+      max-height:520px;
+      object-fit:contain;
+      background:#000;
+      display:block;
+    }
+
+    @media (max-width:900px){
+      .img-card img,
+      .video-card video{
+        max-height:360px;
+      }
+    }
+
+    .img-card figcaption,
+    .video-card figcaption{
+      padding:.55rem .8rem;
+      color:#E4EBF5;
+      font-size:.95rem;
+      text-align:center;
+    }
+
+    /* Grid of two media blocks for HOW */
+    .media-grid{
+      display:grid;
+      gap:1rem;
+      grid-template-columns:1fr 1fr;
+    }
+    @media (max-width:900px){
+      .media-grid{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+<body id="top">
+
+  <!-- Hero -->
+  <header class="hero hero--thin">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>PR0001 – Multi-Stage Robotic Inspection &amp; Sorting Cell</h1>
+      <p class="tagline">Educational training cell for automated visual inspection, material classification, and PLC–robot coordination.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- WHAT (text left, Simulation video right) -->
+      <h2 style="color:#fff;margin:0 0 1rem;">What</h2>
+      <div class="split">
+        <div class="split-text">
+          <ul>
+            <li>Designed a training cell to perform multi-parameter inspection and sorting of mixed material parts.</li>
+            <li>Integrated photoelectric sensors, color detection, and material classification (metal / non-metal) using capacitive and inductive sensors.</li>
+            <li>Built to teach industrial sequencing, vision inspection, and robot–PLC handshaking concepts.</li>
+          </ul>
+        </div>
+
+        <figure class="video-card">
+          <video controls>
+            <source src="assets/PR0001_Simulation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Simulation / Cell Logic Demonstration</figcaption>
+        </figure>
+      </div>
+
+      <!-- HOW (videos left, text right) -->
+      <h2 style="color:#fff;margin:1.6rem 0 1rem;">How</h2>
+      <div class="split">
+        <div class="media-grid">
+          <figure class="video-card">
+            <video controls>
+              <source src="assets/PR0001_PickAndPlace_MaterialCheck.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Pick and Place / Metal vs Non-Metal Check</figcaption>
+          </figure>
+
+          <figure class="video-card">
+            <video controls>
+              <source src="assets/PR0001_PickAndPlace_MaterialCheck.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Color and Sorting Station (Classification)</figcaption>
+          </figure>
+        </div>
+
+        <div class="split-text">
+          <ul>
+            <li>Configured a PLC-controlled conveyor that triggers robotic inspection cycles using sensor feedback.</li>
+            <li>The robot captures images for surface scratch / patch detection and classifies parts via color and material sensors.</li>
+            <li>Implemented step-based control logic for movement, inspection, and part placement in respective zones.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- RESULTS (text left, complete video right) -->
+      <h2 style="color:#fff;margin:1.6rem 0 1rem;">Results</h2>
+      <div class="split">
+        <div class="split-text">
+          <ul>
+            <li>Delivered a hands-on training cell illustrating integrated vision and sensor-based automation.</li>
+            <li>Simplified PLC–robot coordination enables students to study object detection, quality sorting, and process automation.</li>
+            <li>Provides a modular platform for expanding into IIoT and AI-vision applications in future coursework.</li>
+          </ul>
+        </div>
+
+        <figure class="video-card">
+          <video controls>
+            <source src="assets/PR0001_Complete_Cell.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Complete Cell Run (Full Sequence)</figcaption>
+        </figure>
+      </div>
+
+      <p class="center" style="margin-top:1.25rem">
+        <a class="pill pill-light" href="project.html">← Back to Projects</a>
+        <a class="pill pill-light" href="index.html">Home</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Soham A. Bhat Dubere</p>
+    <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
