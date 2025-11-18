@@ -7,15 +7,15 @@
   <meta name="robots" content="noindex,nofollow"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    /* Ensure this page never reintroduces cropping */
-    .media-grid--large .img-card img{
-      width:100% !important;
-      height:auto !important;
-      object-fit:contain !important;
-      background:#000;
+    .img-card img {
+      width: 100% !important;
+      height: auto !important;
+      object-fit: contain !important;
+      background: #000;
     }
   </style>
 </head>
+
 <body id="top">
 
   <!-- Hero -->
@@ -23,8 +23,7 @@
     <div class="hero-bg"></div>
     <div class="hero-content">
       <h1>6D Pose Estimation and Material Handling with ABB GoFa Cobot</h1>
-      <p class="tagline">Vision-guided handling using Intel RealSense, YOLO, and ArUco with Python to ABB RAPID communication.</p>
-      <!-- Top navigation intentionally removed -->
+      <p class="tagline">Vision-guided handling using Intel RealSense, YOLO, ArUco, and Python → ABB RAPID.</p>
     </div>
   </header>
 
@@ -34,64 +33,59 @@
       <!-- WHY -->
       <h2 style="color:#fff;margin:0 0 1rem;">Why</h2>
       <div class="split">
+
         <div class="split-text">
           <ul>
-            <li>Traditional pick-and-place relied on fixed points, making it inefficient for multi-part handling or variable orientations.</li>
-            <li>Needed a real-time, vision-guided control system to adapt dynamically to object position and orientation.</li>
-            <li>The goal was to achieve high-precision material handling without manual re-teaching between cycles.</li>
+            <li>Traditional pick-and-place relied on fixed positions, limiting multi-part and variable-orientation handling.</li>
+            <li>Required real-time vision feedback to dynamically adjust object pose and robot orientation.</li>
+            <li>Goal: high-precision handling without re-teaching or manual intervention across cycles.</li>
           </ul>
         </div>
 
-        <!-- Control Architecture (slightly larger) + Cell Design (standard) -->
-        <div class="media-grid media-grid--large">
-          <figure class="img-card img-card--lg">
-            <img src="assets/CONTROL%20ARCHITECTURE%20.jpg" alt="Control Architecture"/>
-            <figcaption>Control Architecture</figcaption>
-          </figure>
-          <figure class="img-card">
-            <img src="assets/COBOT%20CELL%20LAYOUT%20DESIGN%20.jpeg" alt="Cell Design"/>
-            <figcaption>Cell Design</figcaption>
-          </figure>
-        </div>
+        <!-- ArUco Marker now in WHY -->
+        <figure class="img-card">
+          <img src="assets/Aruco%20Marker%20Detection%20.jpg" alt="ArUco Marker Detection"/>
+          <figcaption>ArUco Marker Detection</figcaption>
+        </figure>
+
       </div>
 
       <!-- HOW -->
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">How</h2>
+
       <div class="split">
-        <!-- ArUco + Cell Photo -->
-        <div class="media-grid media-grid--large">
-          <figure class="img-card">
-            <img src="assets/Aruco%20Marker%20Detection%20.jpg" alt="ArUco Marker Detection"/>
-            <figcaption>ArUco Marker Detection</figcaption>
-          </figure>
-          <figure class="img-card">
-            <img src="assets/Vision%20Cell%20.jpeg" alt="Vision Cell"/>
-            <figcaption>Vision Cell</figcaption>
-          </figure>
-        </div>
+
+        <!-- Vision Cell -->
+        <figure class="img-card">
+          <img src="assets/Vision%20Cell%20.jpeg" alt="Vision Cell"/>
+          <figcaption>Vision Cell</figcaption>
+        </figure>
 
         <div class="split-text">
           <ul>
-            <li>Integrated YOLO pose + ArUco marker detection for 6D pose estimation using Intel RealSense depth data.</li>
-            <li>Developed 2D/3D trajectory routines with Python–RAPID socket communication for ABB GoFa, enabling synchronized motion.</li>
-            <li>Performed camera-to-robot frame calibration to maintain spatial alignment across cycles.</li>
-            <li>Implemented cycle-based control logic with Rz-axis quaternion interpolation and offset mapping, ensuring smooth transitions and accurate orientation.</li>
+            <li>Integrated YOLO pose + ArUco marker detection using Intel RealSense depth data.</li>
+            <li>Developed 2D/3D trajectory generation with Python → ABB RAPID socket communication.</li>
+            <li>Performed camera-to-robot calibration for precise spatial mapping.</li>
+            <li>Implemented cycle-based control with Rz quaternion interpolation and offset mapping.</li>
           </ul>
         </div>
+
       </div>
 
       <!-- RESULTS -->
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">Results</h2>
+
       <div class="split">
+
         <div class="split-text">
           <ul>
-            <li>Achieved sub-centimeter positional accuracy and stable orientation control across multiple pick-place cycles.</li>
-            <li>Reduced pose-switching lag by 40%, improving real-time response and reliability.</li>
-            <li>Delivered a modular, vision-integrated cobot cell deployable across multiple workflows.</li>
+            <li>Achieved sub-centimeter positional accuracy across multiple cycles.</li>
+            <li>Reduced orientation-switching lag by 40% using optimized Rz-quaternion smoothing.</li>
+            <li>Delivered a modular cobot vision cell adaptable to multiple industrial workflows.</li>
           </ul>
         </div>
 
-        <!-- 6D Pick and Place Video -->
+        <!-- 6D Pick & Place Demo -->
         <figure class="img-card">
           <video controls poster="assets/Vision%20Cell%20.jpeg">
             <source src="assets/Vision_Video.mp4" type="video/mp4">
@@ -99,30 +93,40 @@
           </video>
           <figcaption>6D Pick and Place Demonstration</figcaption>
         </figure>
+
       </div>
 
-      <!-- Overall video at the bottom -->
+      <!-- Full Cell Demonstration -->
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">Overall Cell Demonstration</h2>
+
       <video controls style="width:100%;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.35);background:#000"
-             poster="assets/COBOT%20CELL%20LAYOUT%20DESIGN%20.jpeg">
+             poster="assets/Vision%20Cell%20.jpeg">
         <source src="assets/Robot%20Final%20Cell%20Video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+
+      <p class="center" style="margin-top:1rem; font-size:1rem;">
+        Source:  
+        <a href="https://www.linkedin.com/posts/irobotics-eduai_cobot-collaborativerobots-standardcobotsystem-activity-7373598306398031872-iw0e?utm_source=share&utm_medium=member_desktop&rcm=ACoAACydstEBfpswltLDd6UX8tW0ro43U6dF_x8"
+           target="_blank" style="color:#9ecbff;">
+          LinkedIn – iRobotics Demo Video
+        </a>
+      </p>
 
       <p class="center" style="margin-top:1.25rem">
         <a class="pill pill-light" href="experience.html">Work Experience</a>
         <a class="pill pill-light" href="index.html">Home</a>
       </p>
+
     </div>
   </section>
 
   <footer class="footer">
     <p>© <span id="year"></span> Soham A. Bhat Dubere</p>
-    <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+    <a class="to-top" href="#top">↑</a>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+
 </body>
 </html>
