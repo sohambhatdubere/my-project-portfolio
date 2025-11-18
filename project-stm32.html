@@ -14,7 +14,7 @@
     <div class="hero-bg"></div>
     <div class="hero-content">
       <h1>IoT-Enabled Welding Robot Cell (Smart Controller)</h1>
-      <p class="tagline">Android HMI → Smart Controller → Robot | Modbus-TCP bridge with push-button fallback & safety interlocks.</p>
+      <p class="tagline">Android HMI → Smart Controller → Robot | Modbus-TCP bridge with push-button fallback &amp; safety interlocks.</p>
     </div>
   </header>
 
@@ -24,25 +24,37 @@
       <!-- WHAT -->
       <h2 style="color:#fff;margin:0 0 1rem;">What</h2>
       <div class="split">
-        <div class="split-text" style="width:100%;">
+        <div class="split-text">
           <ul>
             <li>Replaced the traditional PLC with a <strong>smart controller–based master–slave Modbus-TCP/IP controller</strong>, serving as the central control unit of the welding robot cell.</li>
             <li>Developed the complete solution architecture covering <strong>register mapping</strong>, <strong>command logic</strong>, <strong>real-time robot monitoring</strong>, and <strong>safety logic</strong> for reliable operation.</li>
             <li>Built an <strong>Android HMI interface</strong> for robot program execution, <strong>servo control</strong>, <strong>alarm reset</strong>, and <strong>production count tracking</strong>, enabling IoT-style supervisory control.</li>
           </ul>
         </div>
+
+        <!-- Android HMI screen image -->
+        <figure class="img-card">
+          <img src="assets/Android%20screen%20.jpg" alt="Android HMI screen for welding robot cell"/>
+          <figcaption>Android HMI Screen</figcaption>
+        </figure>
       </div>
 
       <!-- HOW -->
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">How</h2>
       <div class="split">
-        <div class="split-text" style="width:100%;">
+        <div class="split-text">
           <ul>
             <li>Configured the <strong>smart controller</strong> to act as a <strong>Modbus-TCP client to the robot</strong> and a <strong>Modbus-TCP server to the Android HMI</strong>, forming a reliable master–slave bridge that enables full bidirectional communication.</li>
             <li>Ensured continuous robot cell operation even if <strong>Wi-Fi or the Android tablet disconnects</strong>, by keeping the smart controller persistently connected to the robot and allowing control through <strong>physical push-buttons</strong>.</li>
             <li>Created <strong>systemd service files</strong> on the smart controller to automatically start the <strong>Ethernet</strong>, <strong>Wi-Fi</strong>, and <strong>Python control script</strong> during boot-up, with proper dependency ordering and <strong>auto-restart</strong> policies for reliability.</li>
           </ul>
         </div>
+
+        <!-- Final part image now beside HOW -->
+        <figure class="img-card">
+          <img src="assets/GRIC%20FINAL%20CELL%20.jpeg" alt="Finished welded part / final cell output"/>
+          <figcaption>Final Part / Cell Output</figcaption>
+        </figure>
       </div>
 
       <!-- RESULTS -->
@@ -57,19 +69,15 @@
           </ul>
         </div>
 
-        <!-- Final part image -->
+        <!-- New demo video beside Results -->
         <figure class="img-card">
-          <img src="assets/GRIC%20FINAL%20CELL%20.jpeg" alt="Finished welded part / final cell output"/>
-          <figcaption>Final Part / Cell Output</figcaption>
+          <video controls style="width:100%;display:block;background:#000">
+            <source src="assets/Smart%20Robot%20Welding%20Video%20.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Smart Robot Welding – Demo Video</figcaption>
         </figure>
       </div>
-
-      <!-- Demo Video -->
-      <h2 style="color:#fff;margin:1.6rem 0 1rem;">Demo Video</h2>
-      <video controls style="width:100%;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.35);background:#000">
-        <source src="assets/Final%20Working%20Video%20.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
 
       <p class="center" style="margin-top:1.25rem">
         <a class="pill pill-light" href="experience.html">Work Experience</a>
