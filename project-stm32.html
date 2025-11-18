@@ -24,37 +24,19 @@
       <!-- WHAT -->
       <h2 style="color:#fff;margin:0 0 1rem;">What</h2>
       <div class="split">
-        <div class="split-text">
+        <div class="split-text" style="width:100%;">
           <ul>
             <li>Replaced the traditional PLC with a <strong>smart controller–based master–slave Modbus-TCP/IP controller</strong>, serving as the central control unit of the welding robot cell.</li>
             <li>Developed the complete solution architecture covering <strong>register mapping</strong>, <strong>command logic</strong>, <strong>real-time robot monitoring</strong>, and <strong>safety logic</strong> for reliable operation.</li>
             <li>Built an <strong>Android HMI interface</strong> for robot program execution, <strong>servo control</strong>, <strong>alarm reset</strong>, and <strong>production count tracking</strong>, enabling IoT-style supervisory control.</li>
           </ul>
         </div>
-
-        <!-- Control Architecture image -->
-        <figure class="img-card">
-          <img src="assets/Control%20Architecture.png" alt="Control Architecture: Android ↔ Smart Controller ↔ Robot"/>
-          <figcaption>Control Architecture</figcaption>
-        </figure>
       </div>
 
       <!-- HOW -->
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">How</h2>
       <div class="split">
-        <!-- Design photos -->
-        <div class="media-grid">
-          <figure class="img-card">
-            <img src="assets/Design%20GRIC%20cell%20.jpeg" alt="Cell design – panel/HMI view"/>
-            <figcaption>Panel / HMI Design</figcaption>
-          </figure>
-          <figure class="img-card">
-            <img src="assets/Design%20GRIC%202.jpeg" alt="Cell design – wiring/IO layout"/>
-            <figcaption>IO & Wiring Layout</figcaption>
-          </figure>
-        </div>
-
-        <div class="split-text">
+        <div class="split-text" style="width:100%;">
           <ul>
             <li>Configured the <strong>smart controller</strong> to act as a <strong>Modbus-TCP client to the robot</strong> and a <strong>Modbus-TCP server to the Android HMI</strong>, forming a reliable master–slave bridge that enables full bidirectional communication.</li>
             <li>Ensured continuous robot cell operation even if <strong>Wi-Fi or the Android tablet disconnects</strong>, by keeping the smart controller persistently connected to the robot and allowing control through <strong>physical push-buttons</strong>.</li>
