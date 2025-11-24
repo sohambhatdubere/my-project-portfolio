@@ -7,22 +7,7 @@
   <meta name="robots" content="noindex,nofollow"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    .img-card img{
-      width:100%;
-      height:auto;
-      object-fit:contain;
-      max-height:520px;
-      background:#000;
-    }
-    @media (max-width:900px){
-      .img-card img{ max-height:360px; }
-    }
-    .media-grid{
-      display:grid; gap:1rem;
-      grid-template-columns:1fr 1fr;
-    }
-    @media (max-width:900px){ .media-grid{ grid-template-columns:1fr; } }
-
+    .img-card,
     .video-card{
       margin:0;
       background:rgba(255,255,255,.06);
@@ -30,17 +15,41 @@
       border-radius:14px;
       overflow:hidden;
       box-shadow:0 10px 24px rgba(0,0,0,.28);
-      display:flex; flex-direction:column;
+      display:flex;
+      flex-direction:column;
     }
+    .img-card img,
     .video-card video{
       width:100%;
       height:auto;
       max-height:520px;
+      object-fit:contain;
       background:#000;
       display:block;
     }
+    @media (max-width:900px){
+      .img-card img,
+      .video-card video{
+        max-height:360px;
+      }
+    }
+    .img-card figcaption,
     .video-card figcaption{
-      padding:.55rem .8rem; color:#E4EBF5; font-size:.95rem; text-align:center;
+      padding:.55rem .8rem;
+      color:#E4EBF5;
+      font-size:.95rem;
+      text-align:center;
+    }
+
+    .media-grid{
+      display:grid;
+      gap:1rem;
+      grid-template-columns:1fr 1fr;
+    }
+    @media (max-width:900px){
+      .media-grid{
+        grid-template-columns:1fr;
+      }
     }
   </style>
 </head>
@@ -68,33 +77,34 @@
           </ul>
         </div>
 
-        <!-- HMI Menu beside What -->
-        <figure class="img-card">
-          <img src="assets/HMI%20Menu.png" alt="HMI Menu screen – weld job selection and status"/>
-          <figcaption>HMI Menu</figcaption>
-        </figure>
+        <!-- TWO HMI SCREENS -->
+        <div class="media-grid">
+          <figure class="img-card">
+            <img src="assets/HMI%20Menu.png" alt="HMI main menu for Fanuc welding cell"/>
+            <figcaption>HMI Menu</figcaption>
+          </figure>
+          <figure class="img-card">
+            <img src="assets/unnamed.png" alt="HMI IO signal status list"/>
+            <figcaption>HMI IO Signal Check</figcaption>
+          </figure>
+        </div>
       </div>
 
       <!-- HOW -->
       <h2 style="color:#fff;margin:1.6rem 0 1rem;">How</h2>
       <div class="split">
-        <!-- HMI IO Signal Check + Fanuc Cell -->
-        <div class="media-grid">
-          <figure class="img-card">
-            <img src="assets/unnamed.png" alt="HMI IO signal list for PLC–robot diagnostics"/>
-            <figcaption>HMI IO Signal Check</figcaption>
-          </figure>
-          <figure class="img-card">
-            <img src="assets/Fanuc_Welding_Cell.jpg" alt="Fanuc welding cell — torch, fixture, safety, IO"/>
-            <figcaption>Fanuc Welding Cell</figcaption>
-          </figure>
-        </div>
+        <!-- Only Mitsubishi HMI interface image now -->
+        <figure class="img-card">
+          <img src="assets/Mitsubishi_HMI_Screen.jpg"
+               alt="Mitsubishi HMI — weld job setup, alarms, counters"/>
+          <figcaption>Mitsubishi HMI Interface</figcaption>
+        </figure>
 
         <div class="split-text">
           <ul>
             <li>Programmed Fanuc jobs for path execution, torch clean, and synchronized weld start/stop with PLC interlocks.</li>
-            <li>FX5U logic for sequence control, safety checks, Fronius handshake, and peripheral coordination over CC-Link.</li>
-            <li>Mitsubishi HMI screens for job selection, cycle control, alarms/history, and maintenance routines.</li>
+            <li>Implemented FX5U sequence control, safety checks, Fronius handshake, and peripheral coordination over CC-Link.</li>
+            <li>Configured Mitsubishi HMI screens for job selection, cycle control, alarms/history, and maintenance routines.</li>
             <li>Validated IO timing and ready-state checks prior to commissioning for predictable startup.</li>
           </ul>
         </div>
